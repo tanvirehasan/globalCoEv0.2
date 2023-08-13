@@ -8513,3 +8513,37 @@ label {
         transform: rotate(-360deg);
     }
 }
+
+
+
+
+
+/* Style */
+
+
+
+.mission p, .vision p{
+	color: #000 !important;
+
+}
+
+.mission, .vision{
+	border-radius: 10px;
+}
+
+.Values{
+	background-color: cadetblue;
+	border-radius: 10px;
+}
+
+.Values ol li{
+	color: #fff !important;
+}
+
+
+.equal-height-cols {
+      display: flex;
+    }
+
+
+

@@ -2,40 +2,31 @@
  <!-- slider-area -->
  <section class="slider-area">
      <div class="slider-active">
-         <div class="single-slider slider-bg" data-background="assets/img/banner/banner_bg.jpg">
-             <div class="container">
-                 <div class="row">
-                     <div class="col-lg-6">
-                         <div class="slider-content">
-                             <span class="sub-title" data-animation="fadeInUp" data-delay=".2s">We Are Expert In This Field</span>
-                             <h2 class="title" data-animation="fadeInUp" data-delay=".4s">Grow Your Business More Efficiently</h2>
-                             <p data-animation="fadeInUp" data-delay=".6s">Agilos helps you to convert your data into a strategic asset and get top-notch business insights.</p>
-                             <a href="services.php" class="btn" data-animation="fadeInUp" data-delay=".8s">Our Services</a>
+
+         <?php $i = 1;
+            $data = SelectData('a_slider', '');
+            while ($row = $data->fetch_object()) { ?>
+
+             <div class="single-slider slider-bg" data-background="assets/img/banner/banner_bg.jpg">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-lg-6">
+                             <div class="slider-content">
+                                 <span class="sub-title" data-animation="fadeInUp" data-delay=".2s">We Are Expert In This Field</span>
+                                 <h2 class="title" data-animation="fadeInUp" data-delay=".4s"><?= $row->slider_title ?></h2>
+                                 <p data-animation="fadeInUp" data-delay=".6s"><?= $row->short_text ?></p>
+                                 <a href="<?= $row->btn_url ?>" class="btn" data-animation="fadeInUp" data-delay=".8s"><?= $row->btn_text ?></a>
+                             </div>
                          </div>
                      </div>
                  </div>
-             </div>
-             <div class="slider-shape">
-                 <img src="assets/img/banner/banner_shape.png" alt="" data-animation="zoomIn" data-delay=".8s">
-             </div>
-         </div>
-         <div class="single-slider slider-bg" data-background="assets/img/banner/banner_bg02.jpg">
-             <div class="container">
-                 <div class="row">
-                     <div class="col-lg-6">
-                         <div class="slider-content">
-                             <span class="sub-title" data-animation="fadeInUp" data-delay=".2s">We Are Expert In This Field</span>
-                             <h2 class="title" data-animation="fadeInUp" data-delay=".4s">Grow Your Business More Efficiently</h2>
-                             <p data-animation="fadeInUp" data-delay=".6s">Agilos helps you to convert your data into a strategic asset and get top-notch business insights.</p>
-                             <a href="services.php" class="btn" data-animation="fadeInUp" data-delay=".8s">Our Services</a>
-                         </div>
-                     </div>
+                 <div class="slider-shape">
+                     <img src="assets/img/banner/banner_shape.png" alt="" data-animation="zoomIn" data-delay=".8s">
                  </div>
              </div>
-             <div class="slider-shape">
-                 <img src="assets/img/banner/banner_shape.png" alt="" data-animation="zoomIn" data-delay=".8s">
-             </div>
-         </div>
+         <?php } ?>
+
+
      </div>
  </section>
  <!-- slider-area-end -->
@@ -58,30 +49,17 @@
                  <div class="about-content-three">
                      <div class="section-title-two mb-20 tg-heading-subheading animation-style3">
                          <span class="sub-title">Get To know US</span>
-                         <h2 class="title tg-element-title">Innovative Business Solutions for Financial Company</h2>
+                         <h2>About Us</h2>
                      </div>
-                     <p class="info-one">Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture. Borem ipsum dolor sitamo amet, consectetur adipiscing elita florai psum.</p>
-                     <div class="about-list-two">
-                         <ul class="list-wrap">
-                             <li><i class="fas fa-arrow-right"></i>100% Better results</li>
-                             <li><i class="fas fa-arrow-right"></i>Suspe ndisse suscipit sagittis</li>
-                             <li><i class="fas fa-arrow-right"></i>promis specific timelineI guarantee</li>
-                             <li><i class="fas fa-arrow-right"></i>Review Credit Reports</li>
-                         </ul>
-                     </div>
-                     <p>Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.</p>
-                     <div class="about-author-info">
-                         <div class="thumb">
-                             <img src="assets/img/images/about_author.png" alt="">
-                         </div>
-                         <div class="content">
-                             <h2 class="title">Mark Stranger</h2>
-                             <span>CEO, Gerow Finance</span>
-                         </div>
-                         <div class="signature">
-                             <img src="assets/img/images/signature.png" alt="">
-                         </div>
-                     </div>
+
+                     <p class="p">
+                         <?php
+                            $postcontent = html_entity_decode(About_Us('about_text'));
+                            $content = strip_tags($postcontent);
+                            echo mb_strimwidth($content, 0, 406, "...");
+                            ?>
+                     </p>
+                     <a href="about.php" class="btn mt-4" data-animation="fadeInUp" data-delay=".8s">Read More</a>
                  </div>
              </div>
          </div>
@@ -162,8 +140,8 @@
                          <div class="icon">
                              <i class="flaticon-piggy-bank"></i>
                          </div>
-                         <h2 class="title"><a href="services-details.php">Finance Planning</a></h2>
-                         <p>Morem ipsum dolor ametey consectre adipiscing.</p>
+                         <h2 class="title"><a href="services-details.php">Post Graduate Diploma</a></h2>
+                         <p>Unlock a World of Specialized Learning</p>
                      </div>
                  </div>
              </div>
@@ -179,8 +157,8 @@
                          <div class="icon">
                              <i class="flaticon-calculator"></i>
                          </div>
-                         <h2 class="title"><a href="services-details.php">Tax File Audit</a></h2>
-                         <p>Morem ipsum dolor ametey consectre adipiscing.</p>
+                         <h2 class="title"><a href="services-details.php">Certifications</a></h2>
+                         <p>Elevate Your Expertise, Become a Certified Professiona.</p>
                      </div>
                  </div>
              </div>
@@ -196,7 +174,7 @@
                          <div class="icon">
                              <i class="flaticon-money"></i>
                          </div>
-                         <h2 class="title"><a href="services-details.php">Investment Idea</a></h2>
+                         <h2 class="title"><a href="services-details.php">Conferences & Awards</a></h2>
                          <p>Morem ipsum dolor ametey consectre adipiscing.</p>
                      </div>
                  </div>
@@ -213,7 +191,7 @@
                          <div class="icon">
                              <i class="flaticon-layers"></i>
                          </div>
-                         <h2 class="title"><a href="services-details.php">Risk Management</a></h2>
+                         <h2 class="title"><a href="services-details.php">Online Courses</a></h2>
                          <p>Morem ipsum dolor ametey consectre adipiscing.</p>
                      </div>
                  </div>
@@ -242,10 +220,13 @@
                  <div class="overview-content">
                      <div class="section-title-two mb-20 tg-heading-subheading animation-style3">
                          <span class="sub-title">Company Overview</span>
-                         <h2 class="title tg-element-title">Plan your business strategy with Our Experts</h2>
+                         <h2 class="title tg-element-title">Why Certification Matters?</h2>
                      </div>
-                     <p class="info-one">Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem ipsum dolor sit amet, consectetur adipiscing elita florai psum.</p>
+
                      <p class="info-two">Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem.</p>
+
+
+
                      <div class="content-bottom">
                          <ul class="list-wrap">
                              <li>

@@ -19,7 +19,7 @@ if (isset($_POST['save'])) {
   <div class="card-body">
     <form action="" method="POST" enctype="multipart/form-data">
       <input type="text" name="about_title" value="<?= $row->about_title ?>" class='form-control mb-4'>
-      <textarea name="about_text" id="summernote"><?= $row->about_text ?></textarea>
+      <textarea name="about_text" id="texteditro"><?= $row->about_text ?></textarea>
       <input type="file" name="about_image" id="" class='form-control my-4'>
       <button name="save" type="submit" class="btn btn-success">Submit</button>
     </form>
