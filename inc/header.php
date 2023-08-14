@@ -1,6 +1,7 @@
 <?php require_once 'config/functions.php' ?>
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -54,7 +55,7 @@
                     <div class="col-lg-7">
                         <div class="header-top-left">
                             <ul class="list-wrap">
-                                <li><i class="flaticon-location"></i>Level-1, House-4/A, Road 84, Gulshan 2</li>
+                                <li><i class="flaticon-location"></i>24-22, 2nd Floor, 89th Street, East Elmhurst, New York - 11369, USA</li>
                                 <li><i class="flaticon-mail"></i><a href="mailto:team@quaziconsultants.com">team@quaziconsultants.com</a></li>
                             </ul>
                         </div>

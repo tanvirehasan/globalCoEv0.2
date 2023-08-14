@@ -8,40 +8,21 @@
         <div class="container">
             <div class="footer-top">
                 <div class="row">
-                    <div class="col-lg-3 col-md-7">
+                    <div class="col-md-6">
                         <div class="footer-widget">
                             <h4 class="fw-title">Information</h4>
                             <div class="footer-info">
-                                <ul class="list-wrap">
-                                    <li>
-                                        <div class="icon">
-                                            <i class="flaticon-pin"></i>
-                                        </div>
-                                        <div class="content">
-                                            <p>Level-1, House-4/A, Road 84, Gulshan 2, Dhaka-1212, Bangladesh</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="flaticon-phone-call"></i>
-                                        </div>
-                                        <div class="content">
-                                            <a href="tel:0123456789">+8801843640517</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="flaticon-clock"></i>
-                                        </div>
-                                        <div class="content">
-                                            <p>Sun. – Thu.: 10 am – 6 pm, <br> Fri-Sat: <span>CLOSED</span></p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <b class="h5 text-white mb-3">Global Center of Excellence, LLC</b>
+                                <p class="h6 text-white mb-3 pt-2">Incorporating Body:</p>
+                                <img src="assets/img/logo/ny.png" width="35%" class="pb-3">
+                                <p class="text-white mb-3 footer-text">DOS ID : 6886942 <br>
+                                    Employer Identification Number (EIN): 93-2089330<br>
+                                    This company has been formed under Section 203 of the Limited Liability Company Law of the State of New York.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-5 col-sm-6">
+                    <div class="col-md-2">
                         <div class="footer-widget">
                             <h4 class="fw-title">Menu</h4>
                             <div class="footer-link">
@@ -55,21 +36,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-5 col-sm-6">
-                        <div class="footer-widget">
-                            <h4 class="fw-title">Quick Links</h4>
-                            <div class="footer-link">
-                                <ul class="list-wrap">
-                                    <li><a href="contact.html">How it’s Work</a></li>
-                                    <li><a href="contact.html">Partners</a></li>
-                                    <li><a href="contact.html">Testimonials</a></li>
-                                    <li><a href="contact.html">Case Studies</a></li>
-                                    <li><a href="contact.html">Pricing</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-7">
+
+                    <div class="col-md-4">
                         <div class="footer-widget">
                             <h4 class="fw-title">Subscribe to Our Newsletter</h4>
                             <div class="footer-newsletter">
@@ -89,10 +57,10 @@
                     <div class="col-md-6">
                         <div class="left-sider">
                             <div class="f-logo">
-                                <a href="index.html"><img src="assets/img/logo/w_logo.png" alt=""></a>
+                                <a href="index.html"><img src="" alt=""></a>
                             </div>
                             <div class="copyright-text">
-                                <p>Copyright © gerow | All Right Reserved</p>
+                                <p>Copyright © Global Center of Excellence, LLC -<?= date('Y') ?> | All Right Reserved</p>
                             </div>
                         </div>
                     </div>
@@ -112,6 +80,7 @@
         </div>
     </div>
 </footer>
+
 <!-- footer-area-end -->
 
 

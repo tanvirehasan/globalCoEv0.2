@@ -127,11 +127,16 @@
                  </div>
              </div>
          </div>
+
          <div class="row justify-content-center">
+
+        <?php 
+            $teab_data = SelectData('catagory', "");
+            while ($catagorys = $teab_data->fetch_object()) {?>
              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                  <div class="services-item-two">
                      <div class="services-thumb-two">
-                         <img src="assets/img/services/h2_services_img01.jpg" alt="">
+                         <img src="assets/img/services/<?= $catagorys->thamnil?>" alt="">
                          <div class="item-shape">
                              <img src="assets/img/services/services_item_shape.png" alt="">
                          </div>
@@ -140,62 +145,16 @@
                          <div class="icon">
                              <i class="flaticon-piggy-bank"></i>
                          </div>
-                         <h2 class="title"><a href="services-details.php">Post Graduate Diploma</a></h2>
-                         <p>Unlock a World of Specialized Learning</p>
+                         <h2 class="title"><a href="services-details.php"><?= $catagorys->cat_title?></a></h2>
+                         <p><?php echo html_entity_decode($catagorys->short_text) ?></p>
                      </div>
                  </div>
              </div>
-             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                 <div class="services-item-two">
-                     <div class="services-thumb-two">
-                         <img src="assets/img/services/h2_services_img02.jpg" alt="">
-                         <div class="item-shape">
-                             <img src="assets/img/services/services_item_shape.png" alt="">
-                         </div>
-                     </div>
-                     <div class="services-content-two">
-                         <div class="icon">
-                             <i class="flaticon-calculator"></i>
-                         </div>
-                         <h2 class="title"><a href="services-details.php">Certifications</a></h2>
-                         <p>Elevate Your Expertise, Become a Certified Professiona.</p>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                 <div class="services-item-two">
-                     <div class="services-thumb-two">
-                         <img src="assets/img/services/h2_services_img03.jpg" alt="">
-                         <div class="item-shape">
-                             <img src="assets/img/services/services_item_shape.png" alt="">
-                         </div>
-                     </div>
-                     <div class="services-content-two">
-                         <div class="icon">
-                             <i class="flaticon-money"></i>
-                         </div>
-                         <h2 class="title"><a href="services-details.php">Conferences & Awards</a></h2>
-                         <p>Morem ipsum dolor ametey consectre adipiscing.</p>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                 <div class="services-item-two">
-                     <div class="services-thumb-two">
-                         <img src="assets/img/services/h2_services_img04.jpg" alt="">
-                         <div class="item-shape">
-                             <img src="assets/img/services/services_item_shape.png" alt="">
-                         </div>
-                     </div>
-                     <div class="services-content-two">
-                         <div class="icon">
-                             <i class="flaticon-layers"></i>
-                         </div>
-                         <h2 class="title"><a href="services-details.php">Online Courses</a></h2>
-                         <p>Morem ipsum dolor ametey consectre adipiscing.</p>
-                     </div>
-                 </div>
-             </div>
+             <?php } ?>
+
+
+
+
          </div>
      </div>
  </section>
