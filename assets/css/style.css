@@ -8520,11 +8520,8 @@ label {
 
 /* Style */
 
-
-
 .mission p, .vision p{
 	color: #000 !important;
-
 }
 
 .mission, .vision{
@@ -8540,10 +8537,11 @@ label {
 	color: #fff !important;
 }
 
-
 .equal-height-cols {
       display: flex;
     }
 
 
-
+.ervices_details, .ervices_details p {
+	color: #000 !important;
+}

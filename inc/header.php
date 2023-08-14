@@ -56,14 +56,14 @@
                         <div class="header-top-left">
                             <ul class="list-wrap">
                                 <li><i class="flaticon-location"></i>24-22, 2nd Floor, 89th Street, East Elmhurst, New York - 11369, USA</li>
-                                <li><i class="flaticon-mail"></i><a href="mailto:team@quaziconsultants.com">team@quaziconsultants.com</a></li>
+                                <li><i class="flaticon-mail"></i><a href="mailto:team@globalcoe.org">team@globalcoe.org</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="header-top-right">
                             <div class="header-contact">
-                                <a href="tel:+8801843640517"><i class="flaticon-phone-call"></i>+8801843640517</a>
+                                <a href="https://api.whatsapp.com/send?phone=19173653890"><i class="fab fa-whatsapp"></i>+1 917 365 3890</a>
                             </div>
                             <div class="header-social">
                                 <ul class="list-wrap">

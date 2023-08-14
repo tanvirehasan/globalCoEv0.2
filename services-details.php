@@ -12,7 +12,7 @@
          <div class="row">
              <div class="col-lg-12">
                  <div class="breadcrumb-content">
-                     <h2 class="title">Service Details</h2>
+                     <h2 class="title">Course Details</h2>
                      <nav aria-label="breadcrumb">
                          <ol class="breadcrumb">
                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -39,7 +39,9 @@
                  <div class="services-details-wrap">
                      <div class="services-details-content">
                          <h2 class="title"><?= $cours->title ?></h2>
-                         <?php echo html_entity_decode($cours->full_text) ?>
+                         <div class="ervices_details">
+                             <?php echo html_entity_decode($cours->full_text) ?>
+                         </div>
                      </div>
                  </div>
              </div>
@@ -53,7 +55,7 @@
                                  <?php
                                     $cat_data = SelectData('catagory', "");
                                     while ($catas = $cat_data->fetch_object()) { ?>
-                                     <li class="<?= ($catas->cat_id == $cours->catg_id) ? 'active' : ''; ?>"><a href="services.php?id=<?=$catas->cat_title?>"><?= $catas->cat_title ?> <i class="flaticon-right-arrow"></i></a></li>
+                                     <li class="<?= ($catas->cat_id == $cours->catg_id) ? 'active' : ''; ?>"><a href="services.php?id=<?= $catas->cat_title ?>"><?= $catas->cat_title ?> <i class="flaticon-right-arrow"></i></a></li>
                                  <?php } ?>
 
                              </ul>
@@ -66,10 +68,10 @@
                              <a href="<?= $cours->doc_pdf_url ?>" target="_blank" download class="download-btn"><i class="far fa-file-pdf"></i>PDF. Download</a>
                          </div>
                      </div>
-                     <div class="services-widget services-sidebar-contact">
+                     <!-- <div class="services-widget services-sidebar-contact">
                          <h4 class="title">If You Need Any Help Contact With Us</h4>
                          <a href="tel:0123456789"><i class="flaticon-phone-call"></i> +91 705 2101 786</a>
-                     </div>
+                     </div> -->
                      <div class="services-widget">
                          <h4 class="sw-title">Get a Free Quote</h4>
                          <div class="services-widget-form">

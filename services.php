@@ -124,13 +124,6 @@
 
 
 
-
-
-
-
-
-
-
  <!-- brand-area -->
  <div class="brand-area-six pt-80 pb-80">
      <div class="container">

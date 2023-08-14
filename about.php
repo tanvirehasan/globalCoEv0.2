@@ -108,7 +108,7 @@
 <section class="team-area team-bg" data-background="assets/img/bg/team_bg.jpg">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 equal-height-cols">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 equal-height-cols">
                 <div class="vision p-5" style="background-color: #00BFFF;">
                     <h2>Our Vision</h2>
                     <P>The vision of <b style="font-weight: bold !important; color:#000;">Global Center of Excellence</b> is to create a world where individuals are empowered to achieve their full potential and make a lasting impact in their chosen fields. We envision a future where our certifications are globally recognized as the gold standard, earning the trust and respect of employers, professionals, and industries alike. </P>
@@ -119,7 +119,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 equal-height-cols">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 equal-height-cols">
                 <div class="mission p-5" style="background-color: #F7D358;">
                     <h2>Our Mission</h2>
                     <P>The mission of <b style="font-size:18px">Global Center of Excellence</b> is to provide individuals with industry-leading certifications in both soft and hard skills, empowering individuals to showcase their expertise, enhance their job prospects, and drive personal and professional growth.</P>

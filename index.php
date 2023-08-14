@@ -7,14 +7,14 @@
             $data = SelectData('a_slider', '');
             while ($row = $data->fetch_object()) { ?>
 
-             <div class="single-slider slider-bg" data-background="assets/img/banner/banner_bg.jpg">
+             <div class="single-slider slider-bg" data-background="assets/img/banner/<?= $row->image_file?>">
                  <div class="container">
                      <div class="row">
                          <div class="col-lg-6">
                              <div class="slider-content">
                                  <span class="sub-title" data-animation="fadeInUp" data-delay=".2s">We Are Expert In This Field</span>
                                  <h2 class="title" data-animation="fadeInUp" data-delay=".4s"><?= $row->slider_title ?></h2>
-                                 <p data-animation="fadeInUp" data-delay=".6s"><?= $row->short_text ?></p>
+                                 <p class="text-dark" data-animation="fadeInUp" data-delay=".6s"><?= $row->short_text ?></p>
                                  <a href="<?= $row->btn_url ?>" class="btn" data-animation="fadeInUp" data-delay=".8s"><?= $row->btn_text ?></a>
                              </div>
                          </div>
@@ -111,6 +111,11 @@
  </div>
  <!-- brand-area-end -->
 
+
+
+
+
+
  <!-- services-area -->
  <section class="services-area-two services-bg-two" data-background="assets/img/bg/services_bg02.jpg">
      <div class="container">
@@ -130,35 +135,34 @@
 
          <div class="row justify-content-center">
 
-        <?php 
-            $teab_data = SelectData('catagory', "");
-            while ($catagorys = $teab_data->fetch_object()) {?>
-             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                 <div class="services-item-two">
-                     <div class="services-thumb-two">
-                         <img src="assets/img/services/<?= $catagorys->thamnil?>" alt="">
-                         <div class="item-shape">
-                             <img src="assets/img/services/services_item_shape.png" alt="">
+             <?php
+                $teab_data = SelectData('catagory', "");
+                while ($catagorys = $teab_data->fetch_object()) { ?>
+                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                     <div class="services-item-two">
+                         <div class="services-thumb-two">
+                             <img src="assets/img/services/<?= $catagorys->thamnil ?>" alt="">
+                             <div class="item-shape">
+                                 <img src="assets/img/services/services_item_shape.png" alt="">
+                             </div>
                          </div>
-                     </div>
-                     <div class="services-content-two">
-                         <div class="icon">
-                             <i class="flaticon-piggy-bank"></i>
+                         <div class="services-content-two">
+                             <div class="icon">
+                                 <i class="flaticon-piggy-bank"></i>
+                             </div>
+                             <h2 class="title"><a href="services.php?id=<?= $catagorys->cat_title ?>"><?= $catagorys->cat_title ?></a></h2>
+                             <p><?php echo html_entity_decode($catagorys->short_text) ?></p>
                          </div>
-                         <h2 class="title"><a href="services-details.php"><?= $catagorys->cat_title?></a></h2>
-                         <p><?php echo html_entity_decode($catagorys->short_text) ?></p>
                      </div>
                  </div>
-             </div>
              <?php } ?>
-
-
-
 
          </div>
      </div>
  </section>
  <!-- services-area-end -->
+
+
 
  <!-- overview-area -->
  <section class="overview-area pt-120 pb-120">
@@ -178,36 +182,15 @@
              <div class="col-lg-6">
                  <div class="overview-content">
                      <div class="section-title-two mb-20 tg-heading-subheading animation-style3">
-                         <span class="sub-title">Company Overview</span>
+                         <span class="sub-title">Certification</span>
                          <h2 class="title tg-element-title">Why Certification Matters?</h2>
                      </div>
 
-                     <p class="info-two">Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem.</p>
+                     <p class="info-two">
+                         Professional certifications matter for several reasons, as they offer numerous benefits to both individuals and industries. Here are some key reasons why professional certification is important:
+                     </p>
+                     <a href="why_certification.php" class="btn mt-3" data-animation="fadeInUp" data-delay=".8s">Read More</a>
 
-
-
-                     <div class="content-bottom">
-                         <ul class="list-wrap">
-                             <li>
-                                 <div class="icon">
-                                     <i class="flaticon-trophy"></i>
-                                 </div>
-                                 <div class="content">
-                                     <h2 class="count"><span class="odometer" data-count="235"></span>+</h2>
-                                     <p>Best Award</p>
-                                 </div>
-                             </li>
-                             <li>
-                                 <div class="icon">
-                                     <i class="flaticon-rating"></i>
-                                 </div>
-                                 <div class="content">
-                                     <h2 class="count"><span class="odometer" data-count="98"></span>k</h2>
-                                     <p>Happy Clients</p>
-                                 </div>
-                             </li>
-                         </ul>
-                     </div>
                  </div>
              </div>
          </div>
@@ -216,7 +199,7 @@
  <!-- overview-area-end -->
 
  <!-- choose-area -->
- <section class="choose-area jarallax choose-bg" data-background="assets/img/bg/choose_bg.jpg">
+ <!-- <section class="choose-area jarallax choose-bg" data-background="assets/img/bg/choose_bg.jpg">
      <div class="choose-shape">
          <img src="assets/img/images/choose_shape.png" alt="" data-aos="fade-right" data-aos-delay="0">
      </div>
@@ -262,11 +245,11 @@
              </div>
          </div>
      </div>
- </section>
+ </section> -->
  <!-- choose-area-end -->
 
  <!-- project-area -->
- <section class="project-area-two project-bg-two" data-background="assets/img/bg/project_bg02.jpg">
+ <!-- <section class="project-area-two project-bg-two" data-background="assets/img/bg/project_bg02.jpg">
      <div class="container">
          <div class="row align-items-center justify-content-center">
              <div class="col-lg-6">
@@ -322,12 +305,12 @@
              </div>
          </div>
      </div>
- </section>
+ </section> -->
  <!-- project-area-end -->
 
  <!-- cta-area -->
  <section class="cta-area">
-     <div class="container">
+     <div class="container py-5 ">
          <div class="cta-inner-wrap" data-background="assets/img/bg/cta_bg.jpg">
              <div class="row align-items-center">
                  <div class="col-lg-9">
@@ -356,7 +339,7 @@
  <!-- cta-area-end -->
 
  <!-- team-area -->
- <section class="team-area-two">
+ <!-- <section class="team-area-two">
      <div class="team-shape">
          <img src="assets/img/team/team_shape.png" alt="" data-aos="fade-right" data-aos-delay="200">
      </div>
@@ -453,11 +436,11 @@
              </div>
          </div>
      </div>
- </section>
+ </section> -->
  <!-- team-area-end -->
 
  <!-- testimonial-area -->
- <section class="testimonial-area-two testimonial-bg-two" data-background="assets/img/bg/h2_testimonial_bg.jpg">
+ <!-- <section class="testimonial-area-two testimonial-bg-two" data-background="assets/img/bg/h2_testimonial_bg.jpg">
      <div class="container">
          <div class="row justify-content-center">
              <div class="col-lg-7">
@@ -542,7 +525,7 @@
              <div class="testimonial-nav-two"></div>
          </div>
      </div>
- </section>
+ </section> -->
  <!-- testimonial-area-end -->
 
 
