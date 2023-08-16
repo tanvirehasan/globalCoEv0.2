@@ -7,7 +7,7 @@
             $data = SelectData('a_slider', '');
             while ($row = $data->fetch_object()) { ?>
 
-             <div class="single-slider slider-bg" data-background="assets/img/banner/<?= $row->image_file?>">
+             <div class="single-slider slider-bg" data-background="assets/img/banner/<?= $row->image_file ?>">
                  <div class="container">
                      <div class="row">
                          <div class="col-lg-6">
@@ -542,66 +542,42 @@
              </div>
          </div>
          <div class="row justify-content-center">
-             <div class="col-lg-4 col-md-6 col-sm-10">
-                 <div class="blog-post-item-two">
-                     <div class="blog-post-thumb-two">
-                         <a href="blog-details.php"><img src="assets/img/blog/h2_blog_img01.jpg" alt=""></a>
-                         <a href="blog.php" class="tag">Development</a>
-                     </div>
-                     <div class="blog-post-content-two">
-                         <h2 class="title"><a href="blog-details.php">Meet AutoManage, the best AI management tools</a></h2>
-                         <p>Everything you need to start building area atching presence for your business.</p>
-                         <div class="blog-meta">
-                             <ul class="list-wrap">
-                                 <li>
-                                     <a href="blog-details.php"><img src="assets/img/blog/blog_avatar01.png" alt="">Kat Doven</a>
-                                 </li>
-                                 <li><i class="far fa-calendar"></i>22 Jan, 2023</li>
-                             </ul>
+
+
+             <?php
+                $i = 1;
+                $blog_data = SelectData('blog', "limit 3");
+                while ($blogs = $blog_data->fetch_object()) { ?>
+
+                 <div class="col-lg-4 col-md-6 col-sm-10">
+                     <div class="blog-post-item-two">
+                         <div class="blog-post-thumb-two">
+                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/h2_blog_img01.jpg" alt=""></a>
+                             <a href="blog.php" class="tag"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a>
+                         </div>
+                         <div class="blog-post-content-two">
+                             <h2 class="title"><a href="blog-details.php?id=<?= $blogs->blog_title ?>"><?= $blogs->blog_title ?></a></h2>
+                             <p>
+                                 <?php
+                                    $blog_content = html_entity_decode($blogs->blog_text);
+                                    $blog_text = strip_tags($blog_content);
+                                    echo mb_strimwidth($blog_text, 0, 70, "."); ?>
+                             </p>
+                             <div class="blog-meta">
+                                 <ul class="list-wrap">
+                                     <li>
+                                         <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/blog_avatar01.png" alt="">Admin</a>
+                                     </li>
+                                     <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
+                                 </ul>
+                             </div>
                          </div>
                      </div>
                  </div>
-             </div>
-             <div class="col-lg-4 col-md-6 col-sm-10">
-                 <div class="blog-post-item-two">
-                     <div class="blog-post-thumb-two">
-                         <a href="blog-details.php"><img src="assets/img/blog/h2_blog_img02.jpg" alt=""></a>
-                         <a href="blog.php" class="tag">Business</a>
-                     </div>
-                     <div class="blog-post-content-two">
-                         <h2 class="title"><a href="blog-details.php">Meet AutoManage, the best AI management tools</a></h2>
-                         <p>Everything you need to start building area atching presence for your business.</p>
-                         <div class="blog-meta">
-                             <ul class="list-wrap">
-                                 <li>
-                                     <a href="blog-details.php"><img src="assets/img/blog/blog_avatar01.png" alt="">Kat Doven</a>
-                                 </li>
-                                 <li><i class="far fa-calendar"></i>22 Jan, 2023</li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-lg-4 col-md-6 col-sm-10">
-                 <div class="blog-post-item-two">
-                     <div class="blog-post-thumb-two">
-                         <a href="blog-details.php"><img src="assets/img/blog/h2_blog_img03.jpg" alt=""></a>
-                         <a href="blog.php" class="tag">Tax Advisory</a>
-                     </div>
-                     <div class="blog-post-content-two">
-                         <h2 class="title"><a href="blog-details.php">Meet AutoManage, the best AI management tools</a></h2>
-                         <p>Everything you need to start building area atching presence for your business.</p>
-                         <div class="blog-meta">
-                             <ul class="list-wrap">
-                                 <li>
-                                     <a href="blog-details.php"><img src="assets/img/blog/blog_avatar01.png" alt="">Kat Doven</a>
-                                 </li>
-                                 <li><i class="far fa-calendar"></i>22 Jan, 2023</li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-             </div>
+
+             <?php } ?>
+
+
          </div>
      </div>
  </section>

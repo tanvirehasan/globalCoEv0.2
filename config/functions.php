@@ -34,9 +34,16 @@ function About_Us($col_name){
 
 //catagory
 function postcate($col_name, $id){
-    $row = mysqli_fetch_array(SelectData('blogs_category',"WHERE cat_id='$id'"));
+    $row = mysqli_fetch_array(SelectData('blog_catagory',"WHERE blog_cata_id='$id'"));
     return $row[$col_name];
 }
+
+//catagory
+function rowcount($col_name, $id){
+    $row = mysqli_fetch_array(SelectData('blog_catagory', "WHERE blog_cata_id='$id'"));
+    return $row[$col_name];
+}
+
 
 //category ID
 function cateid($cat_name){
