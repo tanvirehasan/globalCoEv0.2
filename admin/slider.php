@@ -9,7 +9,7 @@
   $btn_text     = htmlspecialchars($_POST['btn_text']);
   $btn_url      = htmlspecialchars($_POST['btn_url']);
 
-  $target_dir = "../upload/slider/";
+  $target_dir = "../assets/img/banner/";
   $image      = $_FILES["image_file"]["name"];
   $target_file = $target_dir . basename($_FILES["image_file"]["name"]);
   move_uploaded_file($_FILES["image_file"]["tmp_name"], $target_file);

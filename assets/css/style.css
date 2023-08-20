@@ -535,11 +535,11 @@ label {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 }
-.logo img,
-.f-logo img,
-.fw-logo img {
-    max-height: 55px;
-}
+
+
+
+
+
 .navbar-wrap {
 	display: flex;
 	flex-grow: 1;
@@ -717,6 +717,12 @@ label {
 	border-radius: 0;
 }
 
+
+.divider{
+	margin-top: 140px !important;
+}
+
+
 /* header-two */
 .header-style-two .heder-top-wrap {
 	padding: 0;
@@ -849,6 +855,19 @@ label {
 }
 
 
+
+.logo img,
+.fw-logo img {
+    max-width: 135px;	
+}
+
+.f-logo img{
+	width: 40%;
+}
+
+
+
+
 /* header-three */
 .header-action .offcanvas-menu.offcanvas-menu-two a {
 	padding: 0 0;
@@ -901,7 +920,7 @@ label {
 	top: 15px;
 }
 .nav-logo img {
-	max-width: 135px;
+	max-width: 170px;
 }
 .mobile-search {
 	padding: 0 20px 25px 25px;
@@ -8076,15 +8095,18 @@ label {
 	padding: 0 15px;
 }
 .brand-item {
-	min-height: 86px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border: 1px solid rgb(175, 175, 175);
+	border-radius: 5px;
 }
 .brand-item img {
 	cursor: pointer;
-	filter: grayscale(100%);
-	opacity: .5;
+	width: 100%;
+	border-radius: 5px;
+	/* filter: grayscale(100%); */
+	/* opacity: .5; */
 }
 .brand-item:hover img {
 	filter: grayscale(0);
@@ -8291,7 +8313,7 @@ label {
 	font-size: 15px;
 }
 .footer-bottom {
-	border-top: 1px solid #253352;
+	border-top: 1px solid #5f5f80;
 	padding: 48px 0;
 }
 .footer-bottom .f-logo {

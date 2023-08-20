@@ -27,7 +27,8 @@
                             <h4 class="fw-title">Menu</h4>
                             <div class="footer-link">
                                 <ul class="list-wrap">
-                                    <li><a href="about.html">Company</a></li>
+                                    <li><a href="about.php">Company</a></li>
+                                    <li><a href="certificate_verfy.php">Verification</a></li>
                                     <li><a href="contact.html">Careers</a></li>
                                     <li><a href="contact.html">Press media</a></li>
                                     <li><a href="blog.html">Our Blog</a></li>
@@ -57,7 +58,7 @@
                     <div class="col-md-6">
                         <div class="left-sider">
                             <div class="f-logo">
-                                <a href="index.html"><img src="" alt=""></a>
+                                <a href="index.html"><img src="assets/img/logo/logo_w.png" alt=""></a>
                             </div>
                             <div class="copyright-text">
                                 <p>Copyright © Global Center of Excellence, LLC -<?= date('Y') ?> | All Right Reserved</p>

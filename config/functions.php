@@ -38,12 +38,12 @@ function postcate($col_name, $id){
     return $row[$col_name];
 }
 
-//catagory
-function rowcount($col_name, $id){
-    $row = mysqli_fetch_array(SelectData('blog_catagory', "WHERE blog_cata_id='$id'"));
+
+//Course catagory
+function cours_tcate($col_name, $id){
+    $row = mysqli_fetch_array(SelectData('catagory', "WHERE cat_id ='$id'"));
     return $row[$col_name];
 }
-
 
 //category ID
 function cateid($cat_name){
@@ -115,6 +115,19 @@ function If_Login($url){
 		Reconect($url);
 	}
 }
+
+
+
+function rowcount($TableName, $moresql){
+    global $conn;
+    $sql = "SELECT * FROM $TableName $moresql";
+    $select = mysqli_query($conn, $sql);
+    $row_count = mysqli_num_rows($select);
+    return $row_count;
+}
+
+
+
 
 //Get user data country and city
 function user_from($u_info)

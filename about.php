@@ -1,7 +1,7 @@
 <?php require_once 'inc/header.php' ?>
 
 <!-- breadcrumb-area -->
-<div class="divider" style="margin-top: 140px;"></div>
+<div class="divider"></div>
 <section class="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
     <div class="container">
         <div class="row">

@@ -2,8 +2,7 @@
  <!-- slider-area -->
  <section class="slider-area">
      <div class="slider-active">
-
-         <?php $i = 1;
+         <?php
             $data = SelectData('a_slider', '');
             while ($row = $data->fetch_object()) { ?>
 
@@ -25,8 +24,6 @@
                  </div>
              </div>
          <?php } ?>
-
-
      </div>
  </section>
  <!-- slider-area-end -->
@@ -40,8 +37,8 @@
                      <img src="assets/img/images/h2_about_img01.jpg" alt="" data-aos="fade-down-right" data-aos-delay="0">
                      <img src="assets/img/images/h2_about_img02.jpg" alt="" data-aos="fade-left" data-aos-delay="400">
                      <div class="experience-wrap" data-aos="fade-up" data-aos-delay="300">
-                         <h2 class="title">25 <span>Years</span></h2>
-                         <p>Of Experience in This Finance Advisory Company.</p>
+                         <!-- <h2 class="title">18 <span>Years</span></h2>
+                         <p>of International Experience in Learning & Development Sector.</p> -->
                      </div>
                  </div>
              </div>
@@ -72,40 +69,115 @@
  </section>
  <!-- about-area-end -->
 
+
+
  <!-- brand-area -->
  <div class="brand-aera-two pb-80">
      <div class="container">
+
+         <h2 class="text-center py-5">Clients served by our Centers:</h2>
+
          <div class="row brand-active">
              <div class="col-lg-12">
                  <div class="brand-item">
-                     <img src="assets/img/brand/brand_img01.png" alt="">
+                     <img src="assets/img/brand/dhl.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/linde.png" alt="">
                  </div>
              </div>
              <div class="col-lg-12">
                  <div class="brand-item">
-                     <img src="assets/img/brand/brand_img02.png" alt="">
+                     <img src="assets/img/brand/ssb.png" alt="">
                  </div>
              </div>
              <div class="col-lg-12">
                  <div class="brand-item">
-                     <img src="assets/img/brand/brand_img03.png" alt="">
+                     <img src="assets/img/brand/puma.png" alt="">
                  </div>
              </div>
+
              <div class="col-lg-12">
                  <div class="brand-item">
-                     <img src="assets/img/brand/brand_img04.png" alt="">
+                     <img src="assets/img/brand/h&m.png" alt="">
                  </div>
              </div>
+
              <div class="col-lg-12">
                  <div class="brand-item">
-                     <img src="assets/img/brand/brand_img05.png" alt="">
+                     <img src="assets/img/brand/ericsson.png" alt="">
                  </div>
              </div>
+
              <div class="col-lg-12">
                  <div class="brand-item">
-                     <img src="assets/img/brand/brand_img03.png" alt="">
+                     <img src="assets/img/brand/ilo.png" alt="">
                  </div>
              </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/undp.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/huncr.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/stc.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/brac.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/usaid.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/giz.gif" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/libfc-logo.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/af.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/logo_bn.png" alt="">
+                 </div>
+             </div>
+
+             <div class="col-lg-12">
+                 <div class="brand-item">
+                     <img src="assets/img/brand/wb.png" alt="">
+                 </div>
+             </div>
+
          </div>
      </div>
  </div>
@@ -546,17 +618,17 @@
 
              <?php
                 $i = 1;
-                $blog_data = SelectData('blog', "limit 3");
+                $blog_data = SelectData('blog', "ORDER BY blog_id DESC limit 3");
                 while ($blogs = $blog_data->fetch_object()) { ?>
 
                  <div class="col-lg-4 col-md-6 col-sm-10">
                      <div class="blog-post-item-two">
                          <div class="blog-post-thumb-two">
-                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/h2_blog_img01.jpg" alt=""></a>
+                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
                              <a href="blog.php" class="tag"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a>
                          </div>
                          <div class="blog-post-content-two">
-                             <h2 class="title"><a href="blog-details.php?id=<?= $blogs->blog_title ?>"><?= $blogs->blog_title ?></a></h2>
+                             <h2 class="title"><a href="blog-details.php?id=<?= $blogs->blog_title ?>"><?php echo mb_strimwidth($blogs->blog_title, 0, 46, "") ?></a></h2>
                              <p>
                                  <?php
                                     $blog_content = html_entity_decode($blogs->blog_text);

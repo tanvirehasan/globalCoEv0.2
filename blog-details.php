@@ -8,18 +8,18 @@ if (isset($_GET['id'])) {
 ?>
 
     <!-- breadcrumb-area -->
-    <div class="divider" style="margin-top: 140px;"></div>
+    <div class="divider"></div>
     <!-- breadcrumb-area -->
     <section class="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h2 class="title">Blog Details</h2>
+                        <h2 class="title"><?= ($blogs->resources == '1') ? 'Resource' : 'Blog'; ?> Details</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                                <li class="breadcrumb-item active" aria-current="page"><?= ($blogs->resources == '1') ? 'Resources' : 'Blog'; ?> > <?= $blogs->blog_title?> </li>
                             </ol>
                         </nav>
                     </div>
@@ -40,7 +40,7 @@ if (isset($_GET['id'])) {
                 <div class="row justify-content-center">
                     <div class="col-71">
                         <div class="blog-details-thumb">
-                            <img src="assets/img/blog/<?= $blogs->blog_image ?>" alt="">
+                            <img src="assets/img/blog/<?= $blogs->blog_image ?>" alt="" width="100%">
                         </div>
                         <div class="blog-details-content">
                             <h2 class="title"><?= $blogs->blog_title ?></h2>
@@ -174,9 +174,11 @@ if (isset($_GET['id'])) {
                                 <div class="bs-cat-list">
                                     <ul class="list-wrap">
                                         <?php
-                                            $teab_data = SelectData('blog_catagory',"limit 10");
-                                            while ($catagorys = $teab_data->fetch_object()) { ?>
-                                            <li><a href="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?> <span>(02)</span></a></li>
+                                        $teab_data = SelectData('blog_catagory', "limit 10");
+                                        while ($catagorys = $teab_data->fetch_object()) { ?>
+                                            <li><a href="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?> <span>
+                                                        <?= rowcount('blog', "where blog_catagory='{$catagorys->blog_cata_id}'") ?>
+                                                    </span></a></li>
                                         <?php } ?>
                                     </ul>
                                 </div>

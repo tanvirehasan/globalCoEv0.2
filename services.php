@@ -1,6 +1,6 @@
  <?php require_once "inc/header.php" ?>
  <!-- breadcrumb-area -->
- <div class="divider" style="margin-top: 140px;"></div>
+ <div class="divider"></div>
  <section class="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
      <div class="container">
          <div class="row">
@@ -87,9 +87,9 @@
                      </div>
                  </div>
                  <div class="col-lg-6">
-                     <div class="section-top-content mb-30">
-                         <p>Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor amet, consectetuolor sit amet, consectetur adipiscing elita florai psum sit amet consecteturere.</p>
-                     </div>
+                     <div class="section-top-content mb-30">                        
+                        <p><?= html_entity_decode($cata_datas->short_text)?></p>                    
+                    </div>
                  </div>
              </div>
              <div class="row justify-content-center">
@@ -119,49 +119,6 @@
          </div>
      </section>
  <?php } ?>
+
  <!-- Cours-area-end -->
-
-
-
-
- <!-- brand-area -->
- <div class="brand-area-six pt-80 pb-80">
-     <div class="container">
-         <div class="row brand-active">
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img01.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img02.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img03.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img04.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img05.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img03.png" alt="">
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
-
- <!-- brand-area-end -->
-
  <?php require_once "inc/footer.php" ?>

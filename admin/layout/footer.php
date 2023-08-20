@@ -24,7 +24,7 @@
         <script>
           tinymce.init({
             selector: 'textarea#texteditro',
-            height: 400,
+            height: 800,
             plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
             toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
           });

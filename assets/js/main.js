@@ -132,13 +132,13 @@ function mainSlider() {
 		doAnimations($animatingElements);
 	});
 	BasicSlider.slick({
-		autoplay: false,
-		autoplaySpeed: 10000,
+		autoplay: true,
+		autoplaySpeed: 5000,
 		dots: false,
 		fade: true,
 		arrows: false,
 		responsive: [
-			{ breakpoint: 767, settings: { dots: false, arrows: false } }
+			{ breakpoint: 767, settings: { dots: true, arrows: true } }
 		]
 	});
 
@@ -169,13 +169,13 @@ $('.brand-active').slick({
 	speed: 1000,
 	autoplay: true,
 	arrows: false,
-	slidesToShow: 5,
+	slidesToShow:8,
 	slidesToScroll: 1,
 	responsive: [
 		{
 			breakpoint: 1200,
 			settings: {
-				slidesToShow: 5,
+				slidesToShow: 8,
 				slidesToScroll: 1,
 				infinite: true,
 			}

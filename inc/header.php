@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gerow - Business Consulting HTML Template</title>
+    <title>Global Center of Excellence, LLC</title>
     <meta name="description" content="Gerow - Business Consulting HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -66,12 +66,12 @@
                                 <a href="https://api.whatsapp.com/send?phone=19173653890"><i class="fab fa-whatsapp"></i>+1 917 365 3890</a>
                             </div>
                             <div class="header-social">
-                                <ul class="list-wrap">
+                                <!-- <ul class="list-wrap">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -92,28 +92,16 @@
                                     <ul class="navigation">
                                         <li class="active"><a href="index.php">Home</a></li>
                                         <li><a href="about.php">About Us</a></li>
-                                        <li class="menu-item-has-children"><a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="services.php">Services</a></li>
-                                                <li><a href="services-details.php">Services Details</a></li>
-                                                <li><a href="project-details.php">Portfolio Details</a></li>
-                                                <li><a href="team-details.php">Team Details</a></li>
-                                                <li><a href="error.php">404 Error</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.php">Our Blog</a></li>
-                                                <li><a href="blog-details.php">Blog Details</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="services.php">Services</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="resources.php">Resources</a></li>
                                         <li><a href="contact.php">contacts</a></li>
                                     </ul>
                                 </div>
                                 <div class="header-action d-none d-md-block">
                                     <ul class="list-wrap">
                                         <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
-                                        <li class="header-btn"><a href="contact.php" class="btn btn-two">Get a Quote</a></li>
+                                        <!-- <li class="header-btn"><a href="contact.php" class="btn btn-two">Get a Quote</a></li> -->
                                     </ul>
                                 </div>
                             </nav>

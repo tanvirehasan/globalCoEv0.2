@@ -5,20 +5,21 @@ if (isset($_POST['add_blog'])) {
 
     $title      = htmlspecialchars($_POST['title']);
     $fulltext   = htmlspecialchars($_POST['full_text']);
-    $catg_id   = htmlspecialchars($_POST['catg_id']);
+    $catg_id    = htmlspecialchars($_POST['catg_id']);
+    $resouce    = htmlspecialchars($_POST['resouce_active']);
 
     $target_dir = "../assets/img/blog/";
     $image      = $_FILES["image"]["name"];
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-    InsertData('blog', "blog_title, blog_image, blog_text, blog_catagory", "'$title', '$image','$fulltext','$catg_id'");
+    InsertData('blog', "blog_title, blog_image, blog_text, blog_catagory,resources", "'$title', '$image','$fulltext','$catg_id',$resouce ");
 }
 
-if (isset($_POST['update_service'])) {
+if (isset($_POST['update_blog'])) {
     $fulltext = htmlspecialchars($_POST['full_text']);
-    UpdateData('blog', "blog_title='{$_POST['title']}', Icon='{$_POST['Icon']}', blog_text='$fulltext' WHERE blog_id='{$_GET['service_id']}'");
-    Reconect('services.php');
+    UpdateData('blog', "blog_title='{$_POST['title']}', blog_catagory='{$_POST['catg_id']}', blog_text='$fulltext', resources='{$_POST['resouce_active']}' WHERE blog_id='{$_GET['blogs_id']}'");
+    // Reconect('blog.php');
 }
 
 if (isset($_GET['delete_id'])) {
@@ -30,7 +31,7 @@ if (isset($_GET['delete_id'])) {
 
 <div class="row">
     <div class="col-10">
-        <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-users"></i> Course</h3>
+        <h3 class="bg-white p-3 text-uppercase text-primary"><i class="fas fa-users"></i> Blog/Resource</h3>
     </div>
     <div class="col-2">
         <h3 class="bg-white text-center p-3 text-uppercase text-info"><button onclick="popup()" class="btn p-0 text-primary"> New <i class="fas fa-plus"></i></button></h3>
@@ -38,43 +39,80 @@ if (isset($_GET['delete_id'])) {
 </div>
 
 
+<!-- blog edit  -->
 <div class="card p-5 mb-2">
     <form method="POST" action="" enctype="multipart/form-data">
         <?php
-        if (isset($_GET['service_id'])) {
-            $teab_data = SelectData('aa_our_services', "WHERE service_id='{$_GET['service_id']}' ");
+        if (isset($_GET['blogs_id'])) {
+            $teab_data = SelectData('blog', "WHERE blog_id='{$_GET['blogs_id']}' ");
             while ($service = $teab_data->fetch_object()) {
         ?>
-                <label for="categoryname" class=" form-label" style="font-weight:700;">Service Name</label>
-                <input type="text" class="form-control mb-4 " name="title" value="<?= $service->title ?>" require>
-                <label for="categoryname" class=" form-label" style="font-weight:700;">Service Icon</label>
-                <input type="text" class="form-control mb-4 " name="Icon" value="<?= $service->Icon ?>" require>
-                <label for="categoryname" class="form-label pb-2" style="font-weight:700;">Text & Link</label>
-                <textarea class="form-control" id="texteditro" name="full_text" require> <?= html_entity_decode($service->full_text) ?> </textarea>
-                <div class="float-right my-3">
-                    <button type="submit" name="update_service" class="btn btn-primary"> Update</button>
+                <label for="categoryname" class=" form-label" style="font-weight:700;">Title</label>
+                <input type="text" class="form-control mb-4 " name="title" value="<?= $service->blog_title ?>" require>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label for="categoryname" class=" form-label" style="font-weight:700;">Catagory</label>
+                        <select class="form-control mb-4 " name="catg_id" id="">
+                            <option value="<?= $service->blog_catagory ?>"><?= postcate('blog_cate_title', $service->blog_catagory) ?></option>
+                            <?php
+                            $teab_data = SelectData('blog_catagory', "");
+                            while ($catagorys = $teab_data->fetch_object()) { ?>
+                                <option value="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="resouce" class=" form-label" style="font-weight:700;">Blog/Resource</label>
+                        <select class="form-control mb-4 " name="resouce_active" id="resouce">
+                            <option value="<?= $service->resources ?>"><?= ($service->resources == 0) ? "Blog" : "Resource"; ?></option>
+                            <option value="0">Blog</option>
+                            <option value="1">Resource</option>
+                        </select>
+                    </div>
                 </div>
 
-            <?PHP }
+                <label for="categoryname" class="form-label pb-2" style="font-weight:700;">Details</label>
+                <textarea class="form-control" id="texteditro" name="full_text" require> <?= html_entity_decode($service->blog_text) ?> </textarea>
+                <div class="float-right my-3">
+                    <button type="submit" name="update_blog" class="btn btn-primary"> Update</button>
+                </div>
+
+
+                <!-- new blog  -->
+            <?php }
         } else { ?>
             <div class="newservices">
                 <label for="categoryname" class=" form-label" style="font-weight:700;">Title</label>
                 <input type="text" class="form-control mb-4 " name="title" require>
 
-                <label for="categoryname" class=" form-label" style="font-weight:700;">Blog Image</label>
+                <label for="categoryname" class=" form-label" style="font-weight:700;">Image</label>
                 <input type="file" class="form-control mb-4 " name="image" require>
 
-                <label for="categoryname" class=" form-label" style="font-weight:700;">Blog Catagory</label>
-                <select class="form-control mb-4 " name="catg_id" id="">
-                    <option>Select</option>
-                    <?php
-                    $teab_data = SelectData('blog_catagory', "");
-                    while ($catagorys = $teab_data->fetch_object()) { ?>
-                        <option value="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?></option>
-                    <?php } ?>
-                </select>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="categoryname" class=" form-label" style="font-weight:700;">Catagory</label>
+                        <select class="form-control mb-4 " name="catg_id" id="">
+                            <option>Select</option>
+                            <?php
+                            $teab_data = SelectData('blog_catagory', "");
+                            while ($catagorys = $teab_data->fetch_object()) { ?>
+                                <option value="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
 
-                <label for="categoryname" class="form-label pb-2" style="font-weight:700;">Text & Link</label>
+                    <div class="col-6">
+                        <label for="resouce" class=" form-label" style="font-weight:700;">Blog/Resource</label>
+                        <select class="form-control mb-4 " name="resouce_active" id="resouce">
+                            <option selected value="0">Blog</option>
+                            <option value="1">Resource</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="categoryname" class="form-label pb-2" style="font-weight:700;">Details</label>
                 <textarea class="form-control" id="texteditro" name="full_text" require></textarea>
 
                 <div class="float-right my-3"><button type="submit" name="add_blog" class="btn btn-primary"> Submit</button></div>
@@ -112,8 +150,8 @@ if (isset($_GET['delete_id'])) {
                             <td><?= $blogs->blog_title ?></td>
                             <td> <img src="../upload/blog/<?= $blogs->blog_image ?>" alt="" width="20%"> </td>
                             <td>
-                                <a href="blog.php?id=<?=$blogs->id?>" class="btn btn-warning btn-sm text-white">Edit</a>
-                                <a href="blog.php?delete_id=<?=$blogs->id?>" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm text-white">Delete</a>
+                                <a href="blog.php?blogs_id=<?= $blogs->blog_id ?>" class="btn btn-warning btn-sm text-white">Edit</a>
+                                <a href="blog.php?delete_id=<?= $blogs->blog_id ?>" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm text-white">Delete</a>
                             </td>
                         </tr>
 

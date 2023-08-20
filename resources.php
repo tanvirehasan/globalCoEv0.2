@@ -8,7 +8,7 @@
          <div class="row">
              <div class="col-lg-12">
                  <div class="breadcrumb-content">
-                     <h2 class="title">Latest Blog</h2>
+                     <h2 class="title">Resources</h2>
                      <nav aria-label="breadcrumb">
                          <ol class="breadcrumb">
                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -37,7 +37,7 @@
 
                              <?php
                                 $i = 1;
-                                $blog_data = SelectData('blog', "WHERE resources='0' ORDER BY blog_id DESC");
+                                $blog_data = SelectData('blog', "where resources='1' ");
                                 while ($blogs = $blog_data->fetch_object()) { ?>
 
                                  <div class="col-md-6">

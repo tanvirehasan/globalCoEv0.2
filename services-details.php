@@ -5,7 +5,7 @@
     $cours = $teab_data->fetch_object();
     ?>
  <!-- breadcrumb-area -->
- <div class="divider" style="margin-top: 140px;"></div>
+ <div class="divider"></div>
  <!-- breadcrumb-area -->
  <section class="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
      <div class="container">
@@ -38,7 +38,8 @@
              <div class="col-71 order-0 order-lg-2">
                  <div class="services-details-wrap">
                      <div class="services-details-content">
-                         <h2 class="title"><?= $cours->title ?></h2>
+                         <h2 class="title"><?= $cours->title?></h2>
+                         <img class="py-5" src="assets/img/services/<?= $cours->featured_image?>" alt="" width="100%">
                          <div class="ervices_details">
                              <?php echo html_entity_decode($cours->full_text) ?>
                          </div>
@@ -94,45 +95,6 @@
          </div>
      </div>
  </section>
- <!-- services-details-area-end -->
-
- <!-- brand-area -->
- <div class="brand-area-seven">
-     <div class="container">
-         <div class="row brand-active">
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img01.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img02.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img03.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img04.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img05.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brand_img03.png" alt="">
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <!-- brand-area-end -->
+ <!-- services-details-area-end --> 
 
  <?php require_once "inc/footer.php" ?>
