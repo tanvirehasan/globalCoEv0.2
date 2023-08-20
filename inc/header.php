@@ -91,7 +91,16 @@
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
                                         <li class="active"><a href="index.php">Home</a></li>
-                                        <li><a href="about.php">About Us</a></li>
+                                        <li class="menu-item-has-children"><a href="#">About Us</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.php">About</a></li>
+                                                <li><a href="team.php">Team 1</a></li>
+                                                <li><a href="team.php">Team 2</a></li>
+                                            </ul>
+                                            <div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>
+                                        </li>
+
+
                                         <li><a href="services.php">Services</a></li>
                                         <li><a href="blog.php">Blog</a></li>
                                         <li><a href="resources.php">Resources</a></li>

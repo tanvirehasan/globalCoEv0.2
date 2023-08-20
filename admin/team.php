@@ -12,7 +12,7 @@ if (isset($_POST['update_team'])) {
 }
 
 if (isset($_GET['delete_id'])) {
-    mysqli_query($conn, "DELETE FROM aa_our_services WHERE service_id='{$_GET['delete_id']}'");
+    mysqli_query($conn, "DELETE FROM our_team WHERE tid='{$_GET['delete_id']}'");
     Reconect('team.php');
 }
 ?>
@@ -45,7 +45,7 @@ if (isset($_GET['delete_id'])) {
                 <input type="file" class="form-control mb-4 " name="profile_photos" value="<?= $team_data->profile_photos ?>">
 
                 <label for="categoryname" class="form-label pb-2" style="font-weight:700;">Text & Link</label>
-                <textarea class="form-control" id="summernote" name="profile_text"><?= $team_data->profile_text ?></textarea>
+                <textarea class="form-control" id="texteditro" name="profile_text"><?= $team_data->profile_text ?></textarea>
 
                 <div class="float-right my-3"><button type="submit" name="update_team" class="btn btn-primary"> Submit</button></div>
 
@@ -63,7 +63,7 @@ if (isset($_GET['delete_id'])) {
                 <input type="file" class="form-control mb-4 " name="profile_photos" require>
 
                 <label for="categoryname" class="form-label pb-2" style="font-weight:700;">Text & Link</label>
-                <textarea class="form-control" id="summernote" name="profile_text" require></textarea>
+                <textarea class="form-control" id="texteditro" name="profile_text" require></textarea>
 
                 <div class="float-right my-3"><button type="submit" name="add_team" class="btn btn-primary"> Submit</button></div>
 
@@ -103,7 +103,7 @@ if (isset($_GET['delete_id'])) {
                             <td><?= $team_datas->dasinaton ?></td>
                             <td>
                                 <a href="team.php?tid=<?= $team_datas->tid ?>" class="btn btn-warning btn-sm text-white">Edit</a>
-                                <a href="team.php?tid=<?= $team_datas->tid ?>" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm text-white">Delete</a>
+                                <a href="team.php?delete_id=<?= $team_datas->tid ?>" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm text-white">Delete</a>
                             </td>
                         </tr>
 

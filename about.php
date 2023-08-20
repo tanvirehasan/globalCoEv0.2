@@ -166,82 +166,31 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/img/team/team_img01.jpg" alt="">
-                        <div class="team-social">
-                            <ul class="list-wrap">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
+
+            <?php
+            $team_data = SelectData('our_team', "");
+            while ($teams = $team_data->fetch_object()) { ?>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="team-item-two">
+                        <div class="team-thumb-two">
+                            <a href="team-details.php?id=<?= $teams->tname ?>"><img src="assets/img/team/<?= $teams->profile_photos ?>" alt=""></a>
+                            <div class="team-social-two">
+                                <ul class="list-wrap">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-content-two">
+                            <h2 class="title"><a href="team-details.php?id=<?= $teams->tname ?>"><?= $teams->tname ?></a></h2>
+                            <span><?= $teams->dasinaton ?></span>
                         </div>
                     </div>
-                    <div class="team-content">
-                        <h2 class="title"><a href="team-details.html">Brooklyn Simmons</a></h2>
-                        <span>Finance Advisor</span>
-                    </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/img/team/team_img02.jpg" alt="">
-                        <div class="team-social">
-                            <ul class="list-wrap">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2 class="title"><a href="team-details.html">Guy Hawkins</a></h2>
-                        <span>Investment Department</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/img/team/team_img03.jpg" alt="">
-                        <div class="team-social">
-                            <ul class="list-wrap">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2 class="title"><a href="team-details.html">Savannah Nguyen</a></h2>
-                        <span>Business Consulting</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/img/team/team_img04.jpg" alt="">
-                        <div class="team-social">
-                            <ul class="list-wrap">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2 class="title"><a href="team-details.html">Kristin Watson</a></h2>
-                        <span>Marketing Head</span>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
+
         </div>
     </div>
 </section>
@@ -249,7 +198,7 @@
 
 
 <!-- testimonial-area -->
-<section class="testimonial-area-three testimonial-area-six pt-120">
+<!-- <section class="testimonial-area-three testimonial-area-six pt-120">
     <div class="container">
         <div class="row g-0 align-items-end">
             <div class="col-37">
@@ -298,7 +247,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- testimonial-area-end -->
 
 <!-- brand-area -->
