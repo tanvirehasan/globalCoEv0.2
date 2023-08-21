@@ -41,42 +41,16 @@
               </button>
               <div class="collapse show" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">Overview</a></li>
-                  <li><a href="#" class="link-dark rounded">Updates</a></li>
-                  <li><a href="#" class="link-dark rounded">Reports</a></li>
+                  <li><a href="about_us.php" class="link-dark rounded">About</a></li>
+                  <li><a href="team.php" class="link-dark rounded">Team</a></li>
+                  <li><a href="slider.php" class="link-dark rounded">slider</a></li>
+                  <li><a href="services.php" class="link-dark rounded">Course</a></li>
+                  <li><a href="catagory.php" class="link-dark rounded">Services</a></li>
+                  <li><a href="our_clients.php" class="link-dark rounded">Our Clients</a></li>
+                  <li><a href="blog.php" class="link-dark rounded">blog</a></li>
                 </ul>
               </div>
             </li>
-
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                WE
-              </button>
-              <div class="collapse" id="orders-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">Team</a></li>
-                  <li><a href="/admin/clients" class="link-dark rounded">Clients</a></li>
-                  <li><a href="#" class="link-dark rounded">Trainners</a></li>
-                  <li><a href="#" class="link-dark rounded">Returned</a></li>
-                </ul>
-              </div>
-            </li>
-
-
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Customize-collapse" aria-expanded="false">
-                Customize
-              </button>
-              <div class="collapse" id="Customize-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">Menu</a></li>
-                  <li><a href="#" class="link-dark rounded">Processed</a></li>
-                  <li><a href="#" class="link-dark rounded">Shipped</a></li>
-                  <li><a href="#" class="link-dark rounded">Returned</a></li>
-                </ul>
-              </div>
-            </li>
-
 
 
             <li class="border-top my-3"></li>
