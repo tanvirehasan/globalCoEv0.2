@@ -22,7 +22,7 @@
   <!-- Menu bar  -->
 
   <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-2" style="background:#2471A3;">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0 px-3" href="#">Global Institute Admin</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0 px-3" href="#">GCoE</a>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
         <a class="nav-link" href="#">Sign out</a>

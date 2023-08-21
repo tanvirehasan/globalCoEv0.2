@@ -8,7 +8,7 @@
     <title>Global Center of Excellence, LLC</title>
     <meta name="description" content="Gerow - Business Consulting HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="http://192.168.68.104/globalCoEv0.2/">
+    <!-- <base href="http://192.168.68.104/globalCoEv0.2/"> -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 

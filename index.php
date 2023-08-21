@@ -78,114 +78,21 @@
          <h2 class="text-center py-5">Clients served by our Centers:</h2>
 
          <div class="row brand-active">
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/dhl.png" alt="">
-                 </div>
-             </div>
 
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/linde.png" alt="">
+             <?php
+                $data = SelectData('our_clients', '');
+                while ($row = $data->fetch_object()) { ?>
+                 <div class="col-lg-12">
+                     <div class="brand-item">
+                         <img src="assets/img/brand/<?= $row->client_logo ?>" alt="">
+                     </div>
                  </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/ssb.png" alt="">
-                 </div>
-             </div>
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/puma.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/h&m.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/ericsson.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/ilo.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/undp.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/huncr.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/stc.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/brac.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/usaid.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/giz.gif" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/libfc-logo.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/af.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/logo_bn.png" alt="">
-                 </div>
-             </div>
-
-             <div class="col-lg-12">
-                 <div class="brand-item">
-                     <img src="assets/img/brand/wb.png" alt="">
-                 </div>
-             </div>
+             <?php } ?>
 
          </div>
      </div>
  </div>
  <!-- brand-area-end -->
-
-
-
-
 
 
  <!-- services-area -->
@@ -393,7 +300,7 @@
                              </div>
                              <div class="content">
                                  <span>Call For More Info</span>
-                                 <a href="tel:0123456789">+123 8989 444</a>
+                                 <a href="tel:0123456789">+1 917 365 3890</a>
                              </div>
                          </div>
                          <h2 class="title">Let’s Request a Schedule For Free Consultation</h2>
