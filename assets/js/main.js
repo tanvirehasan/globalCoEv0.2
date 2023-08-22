@@ -169,7 +169,7 @@ $('.brand-active').slick({
 	speed: 1000,
 	autoplay: true,
 	arrows: false,
-	slidesToShow:8,
+	slidesToShow:5,
 	slidesToScroll: 1,
 	responsive: [
 		{

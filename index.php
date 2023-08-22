@@ -11,7 +11,7 @@
                      <div class="row">
                          <div class="col-lg-6">
                              <div class="slider-content">
-                                 <span class="sub-title" data-animation="fadeInUp" data-delay=".2s">We Are Expert In This Field</span>
+                                 <!-- <span class="sub-title" data-animation="fadeInUp" data-delay=".2s">We Are Expert In This Field</span> -->
                                  <h2 class="title" data-animation="fadeInUp" data-delay=".4s"><?= $row->slider_title ?></h2>
                                  <p class="text-dark" data-animation="fadeInUp" data-delay=".6s"><?= $row->short_text ?></p>
                                  <a href="<?= $row->btn_url ?>" class="btn" data-animation="fadeInUp" data-delay=".8s"><?= $row->btn_text ?></a>
@@ -102,7 +102,7 @@
              <div class="col-lg-6 col-md-8">
                  <div class="section-title-two mb-60 tg-heading-subheading animation-style3">
                      <span class="sub-title">What We Do For You</span>
-                     <h2 class="title tg-element-title">We can inspire and Offer Different Services</h2>
+                     <h2 class="title tg-element-title">Our Services</h2>
                  </div>
              </div>
              <div class="col-lg-6 col-md-4">
@@ -228,7 +228,7 @@
  <!-- choose-area-end -->
 
  <!-- project-area -->
- <!-- <section class="project-area-two project-bg-two" data-background="assets/img/bg/project_bg02.jpg">
+ <section class="project-area-two project-bg-two" data-background="assets/img/bg/project_bg02.jpg">
      <div class="container">
          <div class="row align-items-center justify-content-center">
              <div class="col-lg-6">
@@ -284,7 +284,7 @@
              </div>
          </div>
      </div>
- </section> -->
+ </section>
  <!-- project-area-end -->
 
  <!-- cta-area -->
@@ -300,10 +300,10 @@
                              </div>
                              <div class="content">
                                  <span>Call For More Info</span>
-                                 <a href="tel:0123456789">+1 917 365 3890</a>
+                                 <a href="tel:0123456789">+1 9298881619</a>
                              </div>
                          </div>
-                         <h2 class="title">Let’s Request a Schedule For Free Consultation</h2>
+                         <h2 class="title">Request a schedule to know more</h2>
                      </div>
                  </div>
                  <div class="col-lg-3">

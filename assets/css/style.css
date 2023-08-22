@@ -155,13 +155,17 @@ textarea:focus {
 .capitalize {
 	text-transform: capitalize;
 }
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-	font-family: var(--tg-heading-font-family);
+h6{
+	font-family: 'Magistral';
+	font-weight: 500;
+	font-style: normal;
 	color: var(--tg-heading-font-color);
 	margin-top: 0px;
 	margin-bottom: .7rem;
@@ -169,6 +173,8 @@ h6 {
 	line-height: var(--tg-heading-line-height);
 	font-weight: var(--tg-heading-font-weight);
 }
+
+
 h1 a,
 h2 a,
 h3 a,
@@ -858,7 +864,7 @@ label {
 
 .logo img,
 .fw-logo img {
-    max-width: 145px;	
+    max-width: 180px;	
 }
 
 .f-logo img{
@@ -7346,6 +7352,13 @@ label {
 	background-position: center;
 	padding: 120px 0 90px;
 }
+
+.blog-post-content-two h2{
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+
 .section-title-two p {
 	color: var(--tg-paragraph-color);
 	width: 90%;

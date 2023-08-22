@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/fonts/font.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
@@ -57,14 +58,14 @@
                         <div class="header-top-left">
                             <ul class="list-wrap">
                                 <li><i class="flaticon-location"></i>24-22, 2nd Floor, 89th Street, East Elmhurst, New York - 11369, USA</li>
-                                <li><i class="flaticon-mail"></i><a href="mailto:team@globalcoe.org">team@globalcoe.org</a></li>
+                                <li><i class="flaticon-mail"></i><a href="mailto:team@globalcenterofexcellence.com">team@globalcenterofexcellence.com</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="header-top-right">
                             <div class="header-contact">
-                                <a href="https://api.whatsapp.com/send?phone=19173653890"><i class="fab fa-whatsapp"></i>+1 917 365 3890</a>
+                                <a href="https://api.whatsapp.com/send?phone=19173653890"> WhatsApp <i class="fab fa-whatsapp ms-2"></i>+1 917 365 3890</a>
                             </div>
                             <div class="header-social">
                                 <!-- <ul class="list-wrap">
@@ -87,7 +88,7 @@
                         <div class="menu-wrap">
                             <nav class="menu-nav">
                                 <div class="logo">
-                                    <a href="index.php"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="index.php"><img style="" src="assets/img/logo/logo.png" alt="Logo"></a>
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
