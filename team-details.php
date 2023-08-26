@@ -12,7 +12,7 @@
           <div class="row">
               <div class="col-lg-12">
                   <div class="breadcrumb-content">
-                      <h2 class="title">Our Team</h2>
+                      <h2 class="title"> <?=($team->tname== 'Quazi M. Ahmed') ? 'CEO Profile' : 'Our Team' ; ?> </h2>
                       <nav aria-label="breadcrumb">
                           <ol class="breadcrumb">
                               <li class="breadcrumb-item"><a href="index.html">Home</a></li>

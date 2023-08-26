@@ -165,7 +165,7 @@ if (isset($_GET['delete_id'])) {
 
                     <?php
                     $i = 1;
-                    $teab_data = SelectData('aa_our_services', "");
+                    $teab_data = SelectData('aa_our_services', "ORDER BY service_id DESC ");
                     while ($service = $teab_data->fetch_object()) { ?>
 
                         <tr>

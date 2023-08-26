@@ -66,9 +66,29 @@ if (isset($_GET['delete_id'])) {
                     <div class="col-6">
                         <label for="resouce" class=" form-label" style="font-weight:700;">Blog/Resource</label>
                         <select class="form-control mb-4 " name="resouce_active" id="resouce">
-                            <option value="<?= $service->resources ?>"><?= ($service->resources == 0) ? "Blog" : "Resource"; ?></option>
+                            <option value="<?= $service->resources ?>">
+                                <?php
+                                switch ($service->resources) {
+                                    case "0":
+                                        echo "Blog";
+                                        break;
+                                    case "1":
+                                        echo "Resource";
+                                        break;
+                                    case "2":
+                                        echo "Projects";
+                                        break;
+                                    default:
+                                        echo "Data Not Found";
+                                }
+
+                                ?>
+
+
+                            </option>
                             <option value="0">Blog</option>
                             <option value="1">Resource</option>
+                            <option value="2">Projects</option>
                         </select>
                     </div>
                 </div>
@@ -108,6 +128,7 @@ if (isset($_GET['delete_id'])) {
                         <select class="form-control mb-4 " name="resouce_active" id="resouce">
                             <option selected value="0">Blog</option>
                             <option value="1">Resource</option>
+                            <option value="2">Projects</option>
                         </select>
                     </div>
                 </div>

@@ -96,14 +96,15 @@
                                         <li class="menu-item-has-children"><a href="#">About Us</a>
                                             <ul class="sub-menu">
                                                 <li><a href="about.php">About</a></li>
-                                                <li><a href="team.php">Team 1</a></li>
-                                                <li><a href="team.php">Team 2</a></li>
+                                                <li><a href="team-details.php?id=Quazi%20M.%20Ahmed">CEO Profile</a></li>
+                                                <li><a href="team.php">Our Team</a></li>
                                             </ul>
                                             <div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>
                                         </li>
 
 
                                         <li><a href="services.php">Services</a></li>
+                                        <li><a href="services.php">Events</a></li>
                                         <li><a href="blog.php">Blog</a></li>
                                         <li><a href="resources.php">Resources</a></li>
                                         <li><a href="contact.php">contacts</a></li>

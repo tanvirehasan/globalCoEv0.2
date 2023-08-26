@@ -15,11 +15,43 @@ if (isset($_GET['id'])) {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h2 class="title"><?= ($blogs->resources == '1') ? 'Resource' : 'Blog'; ?> Details</h2>
+                        <h2 class="title">
+                            <?php
+                            switch ($blogs->resources) {
+                                case "0":
+                                    echo "Blog";
+                                    break;
+                                case "1":
+                                    echo "Resource";
+                                    break;
+                                case "2":
+                                    echo "Project";
+                                    break;
+                                default:
+                                    echo "Data Not Found";
+                            }
+                            ?> Details
+                        </h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><?= ($blogs->resources == '1') ? 'Resources' : 'Blog'; ?> > <?= $blogs->blog_title?> </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <?php
+                                    switch ($blogs->resources) {
+                                        case "0":
+                                            echo "Blog";
+                                            break;
+                                        case "1":
+                                            echo "Resource";
+                                            break;
+                                        case "2":
+                                            echo "Projects";
+                                            break;
+                                        default:
+                                            echo "Data Not Found";
+                                    }
+                                    ?>
+                                    > <?= $blogs->blog_title ?> </li>
                             </ol>
                         </nav>
                     </div>

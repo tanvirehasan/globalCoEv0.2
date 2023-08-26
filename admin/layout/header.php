@@ -1,4 +1,13 @@
-<?php include "../config/functions.php"; ?>
+<?php
+session_start();
+if (!isset($_SESSION['admin_user'])) {
+  echo "<script> location.replace('login.php')</script>";
+} else {
+  $userid = $_SESSION['admin_user'];
+}
+include "../config/functions.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +34,7 @@
     <a class="navbar-brand col-sm-3 col-md-2 mr-0 px-3" href="#">GCoE</a>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="#">Sign out</a>
+        <a class="nav-link text-capitalize" href="logout.php"> <?= UserData() ?> | Sign out</a>
       </li>
     </ul>
   </nav>
@@ -47,7 +56,9 @@
                   <li><a href="services.php" class="link-dark rounded">Course</a></li>
                   <li><a href="catagory.php" class="link-dark rounded">Services</a></li>
                   <li><a href="our_clients.php" class="link-dark rounded">Our Clients</a></li>
+                  <li><a href="blog.php" class="link-dark rounded">Events</a></li>
                   <li><a href="blog.php" class="link-dark rounded">blog</a></li>
+                  <li><a href="news.php" class="link-dark rounded">Newsletter</a></li>
                 </ul>
               </div>
             </li>

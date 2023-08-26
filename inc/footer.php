@@ -10,9 +10,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="footer-widget">
-                            <h4 class="fw-title">Information</h4>
+                            <h4 class="fw-title">Global Center of Excellence, LLC</h4>
                             <div class="footer-info">
-                                <b class="h5 text-white mb-3">Global Center of Excellence, LLC</b>
                                 <p class="h6 text-white mb-3 pt-2">Incorporating Body:</p>
                                 <img src="assets/img/logo/ny.png" width="35%" class="pb-3">
                                 <p class="text-white mb-3 footer-text">DOS ID : 6886942 <br>
@@ -27,25 +26,25 @@
                             <h4 class="fw-title">Menu</h4>
                             <div class="footer-link">
                                 <ul class="list-wrap">
-                                    <li><a href="about.php">Company</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li><a href="about.php">About Us</a></li>
                                     <li><a href="certificate_verfy.php">Verification</a></li>
-                                    <li><a href="contact.html">Careers</a></li>
-                                    <li><a href="contact.html">Press media</a></li>
-                                    <li><a href="blog.html">Our Blog</a></li>
-                                    <li><a href="contact.html">Privacy Policy</a></li>
+                                    <li><a href="blog.php">Our Blog</a></li>
+                                    <li><a href="contact.php">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+
+                    <div class="col-md-4" id="email">
                         <div class="footer-widget">
                             <h4 class="fw-title">Subscribe to Our Newsletter</h4>
                             <div class="footer-newsletter">
-                                <p>Sign up to Privitar’s weekly newsletter to get the latest updates.</p>
-                                <form action="#">
-                                    <input type="email" placeholder="enter your e-mail">
-                                    <button type="submit">Subscribe</button>
+                                <p>Sign up to get monthly newsletter to get the latest updates.</p>
+                                <form action="user_email.php" method="POST">
+                                    <input type="email" name="news_email" placeholder="enter your e-mail">
+                                    <button type="submit" name="customer_email">Subscribe</button>
                                 </form>
                                 <span>We don’t send you any spam</span>
                             </div>

@@ -45,7 +45,6 @@
              <div class="col-lg-6">
                  <div class="about-content-three">
                      <div class="section-title-two mb-20 tg-heading-subheading animation-style3">
-                         <span class="sub-title">Get To know US</span>
                          <h2>About Us</h2>
                      </div>
 
@@ -107,7 +106,7 @@
              </div>
              <div class="col-lg-6 col-md-4">
                  <div class="view-all-btn text-end mb-30">
-                     <a href="services.php" class="btn">See All Service</a>
+                     <a href="services.php" class="btn">See All Services</a>
                  </div>
              </div>
          </div>
@@ -126,9 +125,9 @@
                              </div>
                          </div>
                          <div class="services-content-two">
-                             <div class="icon">
+                             <!-- <div class="icon">
                                  <i class="flaticon-piggy-bank"></i>
-                             </div>
+                             </div> -->
                              <h2 class="title"><a href="services.php?id=<?= $catagorys->cat_title ?>"><?= $catagorys->cat_title ?></a></h2>
                              <p><?php echo html_entity_decode($catagorys->short_text) ?></p>
                          </div>
@@ -151,7 +150,7 @@
              <div class="col-lg-6 col-md-10">
                  <div class="overview-img-wrap">
                      <img src="assets/img/images/overview_img01.jpg" alt="">
-                     <img src="assets/img/images/overview_img02.jpg" alt="" data-parallax='{"x" : 50 }'>
+                     <!-- <img src="assets/img/images/overview_img02.jpg" alt="" data-parallax='{"x" : 50 }'> -->
                      <img src="assets/img/images/overview_img_shape.png" alt="">
                      <div class="icon">
                          <i class="flaticon-report-1"></i>
@@ -162,13 +161,13 @@
                  <div class="overview-content">
                      <div class="section-title-two mb-20 tg-heading-subheading animation-style3">
                          <span class="sub-title">Certification</span>
-                         <h2 class="title tg-element-title">Why Certification Matters?</h2>
+                         <h2 class="title tg-element-title">Why Training Matters?</h2>
                      </div>
 
                      <p class="info-two">
-                         Professional certifications matter for several reasons, as they offer numerous benefits to both individuals and industries. Here are some key reasons why professional certification is important:
+                         Training matters because it ignites potential, fuels growth, and shapes excellence. It's the compass guiding ordinary individuals towards extraordinary achievements, fostering adaptability in a rapidly evolving world. Just as a blacksmith refines raw metal into a sharp blade, training hones minds and skills into tools for success.
                      </p>
-                     <a href="why_certification.php" class="btn mt-3" data-animation="fadeInUp" data-delay=".8s">Read More</a>
+                     <a href="why_training.php" class="btn mt-3" data-animation="fadeInUp" data-delay=".8s">Read More</a>
 
                  </div>
              </div>
@@ -233,55 +232,40 @@
          <div class="row align-items-center justify-content-center">
              <div class="col-lg-6">
                  <div class="section-title-two mb-40 tg-heading-subheading animation-style3">
-                     <span class="sub-title">Complete Projects</span>
-                     <h2 class="title tg-element-title">Our recently completed <br> projects list</h2>
+                     <!-- <span class="sub-title">Complete Projects</span> -->
+                     <h2 class="title tg-element-title">Some of our recently completed projects</h2>
                  </div>
              </div>
              <div class="col-lg-6 col-md-10">
                  <div class="project-content-top">
-                     <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
+                     <!-- <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p> -->
                  </div>
              </div>
          </div>
      </div>
      <div class="container custom-container">
          <div class="row justify-content-center">
-             <div class="col-lg-4 col-md-6 col-sm-10">
-                 <div class="project-item-two">
-                     <div class="project-thumb-two">
-                         <img src="assets/img/project/h2_project_img01.jpg" alt="">
-                     </div>
-                     <div class="project-content-two">
-                         <h2 class="title"><a href="project-details.php">Finance Consultancy</a></h2>
-                         <span>Advisory</span>
-                         <a href="project-details.php" class="link-btn"><i class="fas fa-chevron-right"></i></a>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-lg-4 col-md-6 col-sm-10">
-                 <div class="project-item-two">
-                     <div class="project-thumb-two">
-                         <img src="assets/img/project/h2_project_img02.jpg" alt="">
-                     </div>
-                     <div class="project-content-two">
-                         <h2 class="title"><a href="project-details.php">Finance Consultancy</a></h2>
-                         <span>Advisory</span>
-                         <a href="project-details.php" class="link-btn"><i class="fas fa-chevron-right"></i></a>
+
+
+             <?php
+                $pro_data = SelectData('blog', "WHERE resources='2'  ORDER BY blog_id DESC limit 3 ");
+                while ($projects = $pro_data->fetch_object()) { ?>
+                 <div class="col-lg-4 col-md-6 col-sm-10">
+                     <div class="project-item-two">
+                         <div class="project-thumb-two">
+                             <img src="assets/img/blog/<?= $projects->blog_image ?>" alt="">
+                         </div>
+                         <div class="project-content-two">
+                             <h2 class="title"><a href="blog-details.php?id=<?= $projects->blog_title ?>"><?= $projects->blog_title ?></a></h2>
+                             <span><?= postcate('blog_cate_title', $projects->blog_catagory) ?></span>
+                             <a href="blog-details.php?id=<?= $projects->blog_title ?>" class="link-btn"><i class="fas fa-chevron-right"></i></a>
+                         </div>
                      </div>
                  </div>
-             </div>
-             <div class="col-lg-4 col-md-6 col-sm-10">
-                 <div class="project-item-two">
-                     <div class="project-thumb-two">
-                         <img src="assets/img/project/h2_project_img03.jpg" alt="">
-                     </div>
-                     <div class="project-content-two">
-                         <h2 class="title"><a href="project-details.php">Finance Consultancy</a></h2>
-                         <span>Advisory</span>
-                         <a href="project-details.php" class="link-btn"><i class="fas fa-chevron-right"></i></a>
-                     </div>
-                 </div>
-             </div>
+             <?php } ?>
+
+
+
          </div>
      </div>
  </section>
@@ -300,7 +284,7 @@
                              </div>
                              <div class="content">
                                  <span>Call For More Info</span>
-                                 <a href="tel:0123456789">+1 9298881619</a>
+                                 <a href="tel:+13478561274">+13478561274</a>
                              </div>
                          </div>
                          <h2 class="title">Request a schedule to know more</h2>
@@ -525,7 +509,7 @@
 
              <?php
                 $i = 1;
-                $blog_data = SelectData('blog', "ORDER BY blog_id DESC limit 3");
+                $blog_data = SelectData('blog', "WHERE resources='0' ORDER BY blog_id DESC limit 3");
                 while ($blogs = $blog_data->fetch_object()) { ?>
 
                  <div class="col-lg-4 col-md-6 col-sm-10">

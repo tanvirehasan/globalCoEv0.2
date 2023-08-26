@@ -59,9 +59,9 @@ function perent_id($cat_name){
 
 
 //UserData
-function UserData($U_data){
-    $row = mysqli_fetch_array(SelectData('admin',"WHERE email='{$_SESSION['user']}'"));
-    echo $row[$U_data];
+function UserData(){
+    $row = mysqli_fetch_array(SelectData('users8r6',"WHERE user_name='{$_SESSION['admin_user']}'"));
+    return $row['user_name'];
 }
 
 //settings

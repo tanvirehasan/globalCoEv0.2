@@ -40,15 +40,15 @@
                          <ul class="list-wrap">
                              <li>24-22, 2nd Floor, 89th Street, East Elmhurst <br> New York - 11369, USA</li>
                              <li><a href="https://api.whatsapp.com/send?phone=19173653890"><i class="fab fa-whatsapp"></i> +1 917 365 3890</a></li>
-                             <li><a href="mailto:team@globalcoe.org"><i class="far fa-envelope"></i> team@globalcoe.org</a></li>
+                             <li><a href="mailto:team@globalcoe.org"><i class="far fa-envelope"></i> team@globalcenterofexcellence.com</a></li>
                          </ul>
                      </div>
                      <div class="contact-info-item">
-                         <h5 class="title-two">Dhaka Office</h5>
+                         <h5 class="title-two">Dhaka Center</h5>
                          <ul class="list-wrap">
                              <li>Level 1, House 4/A, Road 84, Gulshan 2, Dhaka 1212</li>
                              <li><i class="fab fa-whatsapp"></i> +8801843 640 517</li>
-                             <li><a href="mailto:teambd@globalcoe.org"><i class="far fa-envelope"></i> teambd@globalcoe.org</a></li>
+                             <li><a href="mailto:teambd@globalcoe.org"><i class="far fa-envelope"></i> dhaka@globalcenterofexcellence.com</a></li>
                          </ul>
                      </div>
                  </div>
@@ -58,8 +58,10 @@
  </section>
 
  <div class="contact-map">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.332792000835!2d144.96011341744386!3d-37.805673299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1685027435635!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280004312!2d-74.14448749558724!3d40.69763123333827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1693043783644!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
  </div>
+
+
 
 
 
