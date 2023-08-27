@@ -160,7 +160,7 @@
              <div class="col-lg-6">
                  <div class="overview-content">
                      <div class="section-title-two mb-20 tg-heading-subheading animation-style3">
-                         <span class="sub-title">Certification</span>
+                         <!-- <span class="sub-title">Certification</span> -->
                          <h2 class="title tg-element-title">Why Training Matters?</h2>
                      </div>
 

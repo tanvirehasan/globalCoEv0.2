@@ -56,10 +56,7 @@
                                      <img src="assets/img/services/services_item_shape.png" alt="">
                                  </div>
                              </div>
-                             <div class="services-content-two">
-                                 <div class="icon">
-                                     <i class="flaticon-piggy-bank"></i>
-                                 </div>
+                             <div class="services-content-two">                                
                                  <h2 class="title"><a href="services.php?id=<?= $catagorys->cat_title ?>"><?= $catagorys->cat_title ?></a></h2>
                                  <p><?php echo html_entity_decode($catagorys->short_text) ?></p>
                              </div>
@@ -104,10 +101,7 @@
                                      <img src="assets/img/services/services_item_shape.png" alt="">
                                  </div>
                              </div>
-                             <div class="services-content-two">
-                                 <div class="icon">
-                                     <i class="flaticon-piggy-bank"></i>
-                                 </div>
+                             <div class="services-content-two">                                 
                                  <h2 class="title"><a href="services-details.php?id=<?= $cours->title ?>"><?= $cours->title ?></a></h2>
 
                              </div>
