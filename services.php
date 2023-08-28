@@ -35,12 +35,12 @@
                  <div class="col-lg-6">
                      <div class="section-title-two mb-60">
                          <span class="sub-title">What We Do For You</span>
-                         <h2 class="title">We can inspire and Offer Different Services</h2>
+                         <h2 class="title">Our Services</h2>
                      </div>
                  </div>
                  <div class="col-lg-6">
                      <div class="section-top-content mb-30">
-                         <p>Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor amet, consectetuolor sit amet, consectetur adipiscing elita florai psum sit amet consecteturere.</p>
+                         <p>Discover excellence with Our Services. From expert consultations to seamless technical support, we cater to diverse needs across industries. Partner with us for transparent, innovative, and tailored solutions that drive your success forward.</p>
                      </div>
                  </div>
              </div>
@@ -56,7 +56,7 @@
                                      <img src="assets/img/services/services_item_shape.png" alt="">
                                  </div>
                              </div>
-                             <div class="services-content-two">                                
+                             <div class="services-content-two">
                                  <h2 class="title"><a href="services.php?id=<?= $catagorys->cat_title ?>"><?= $catagorys->cat_title ?></a></h2>
                                  <p><?php echo html_entity_decode($catagorys->short_text) ?></p>
                              </div>
@@ -66,10 +66,10 @@
              </div>
          </div>
      </section>
-<!-- services-area-end -->
+     <!-- services-area-end -->
 
 
-<!-- Cours-area -->
+     <!-- Cours-area -->
  <?php
     } else {
         $cat_data = SelectData('catagory', "WHERE cat_title='{$_GET['id']}'");
@@ -84,9 +84,9 @@
                      </div>
                  </div>
                  <div class="col-lg-6">
-                     <div class="section-top-content mb-30">                        
-                        <p><?= html_entity_decode($cata_datas->short_text)?></p>                    
-                    </div>
+                     <div class="section-top-content mb-30">
+                         <p><?= html_entity_decode($cata_datas->short_text) ?></p>
+                     </div>
                  </div>
              </div>
              <div class="row justify-content-center">
@@ -101,7 +101,7 @@
                                      <img src="assets/img/services/services_item_shape.png" alt="">
                                  </div>
                              </div>
-                             <div class="services-content-two">                                 
+                             <div class="services-content-two">
                                  <h2 class="title"><a href="services-details.php?id=<?= $cours->title ?>"><?= $cours->title ?></a></h2>
 
                              </div>

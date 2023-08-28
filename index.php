@@ -9,10 +9,10 @@
              <div class="single-slider slider-bg" data-background="assets/img/banner/<?= $row->image_file ?>">
                  <div class="container">
                      <div class="row">
-                         <div class="col-lg-6">
+                         <div class="col-lg-7">
                              <div class="slider-content">
                                  <!-- <span class="sub-title" data-animation="fadeInUp" data-delay=".2s">We Are Expert In This Field</span> -->
-                                 <h2 class="title" data-animation="fadeInUp" data-delay=".4s"><?= $row->slider_title ?></h2>
+                                 <h3 class="title" data-animation="fadeInUp" data-delay=".4s"><?= $row->slider_title ?></h3>
                                  <p class="text-dark" data-animation="fadeInUp" data-delay=".6s"><?= $row->short_text ?></p>
                                  <a href="<?= $row->btn_url ?>" class="btn" data-animation="fadeInUp" data-delay=".8s"><?= $row->btn_text ?></a>
                              </div>
