@@ -78,16 +78,16 @@ if (isset($_GET['id'])) {
                             <h2 class="title"><?= $blogs->blog_title ?></h2>
                             <div class="blog-meta-three">
                                 <ul class="list-wrap">
-                                    <li><i class="far fa-calendar"></i>22 Jan, 2023</li>
-                                    <li><img src="assets/img/blog/blog_avatar01.png" alt=""> by <a href="blog-details.html">Kat Doven</a></li>
-                                    <li><i class="fas fa-tags"></i> <a href="blog.html">Finance,</a><a href="blog.html">Business</a></li>
+                                    <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
+                                    <li><img src="assets/img/blog/blog_avatar01.png" alt=""> by <a href="blog-details.html">Admin</a></li>
+                                    <li><i class="fas fa-tags"></i> <a href="blog.php"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a></li>
                                     <li><i class="flaticon-speech-bubble"></i><a href="blog-details.html">05 Comments</a></li>
                                 </ul>
                             </div>
 
                             <div><?php echo html_entity_decode($blogs->blog_text); ?></div>
 
-                            <div class="bd-content-bottom">
+                            <!-- <div class="bd-content-bottom">
                                 <div class="row align-items-center">
                                     <div class="col-md-7">
                                         <div class="post-tags">
@@ -110,9 +110,9 @@ if (isset($_GET['id'])) {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="blog-avatar-wrap mb-65">
+                        <!-- <div class="blog-avatar-wrap mb-65">
                             <div class="blog-avatar-img">
                                 <a href="#"><img src="assets/img/blog/avatar.png" alt="img"></a>
                             </div>
@@ -121,8 +121,8 @@ if (isset($_GET['id'])) {
                                 <h4 class="name"><a href="#">Parker Willy</a></h4>
                                 <p>Finanappreciate your trust greatly Our clients choose dentace ducts because know we are the best area Awaitingare really.</p>
                             </div>
-                        </div>
-                        <div class="comments-wrap">
+                        </div> -->
+                        <!-- <div class="comments-wrap">
                             <h3 class="comments-wrap-title">02 Comments</h3>
                             <div class="latest-comments">
                                 <ul class="list-wrap">
@@ -160,8 +160,8 @@ if (isset($_GET['id'])) {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="comment-respond">
+                        </div> -->
+                        <!-- <div class="comment-respond">
                             <h3 class="comment-reply-title">Post a comment</h3>
                             <form action="#" class="comment-form">
                                 <p class="comment-notes">Your email address will not be published. Required fields are marked *</p>
@@ -191,8 +191,14 @@ if (isset($_GET['id'])) {
                                 </div>
                                 <button type="submit" class="submit-btn">Submit Post</button>
                             </form>
-                        </div>
+                        </div> -->
+
+
                     </div>
+
+
+
+
                     <div class="col-29">
                         <aside class="blog-sidebar">
                             <div class="sidebar-search">
@@ -215,47 +221,34 @@ if (isset($_GET['id'])) {
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="blog-widget">
                                 <h4 class="bw-title">Recent Posts</h4>
                                 <div class="rc-post-wrap">
-                                    <div class="rc-post-item">
-                                        <div class="thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/rc_post01.jpg" alt=""></a>
+                                    <?php
+                                    $datas = SelectData('blog', "limit 5");
+                                    while ($recent_posts = $datas->fetch_object()) { ?>
+                                        <div class="rc-post-item">
+                                            <div class="thumb">
+                                                <a href="blog-details.php?id=<?= $recent_posts->blog_title ?>"><img src="assets/img/blog/<?= $recent_posts->blog_image ?>" height="60px"></a>
+                                            </div>
+                                            <div class="content">
+                                                <span class="date"><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($recent_posts->blog_date_time)) ?></span>
+                                                <h6 class="p-0 m-0"><a href="blog-details.php?id=<?= $recent_posts->blog_title ?>">
+                                                        <?php
+                                                        $rblog_content = html_entity_decode($recent_posts->blog_title);
+                                                        $rblog_text = strip_tags($rblog_content);
+                                                        echo mb_strimwidth($rblog_text, 0, 35, "..."); ?>
+                                                    </a>
+                                                </h6>
+                                            </div>
                                         </div>
-                                        <div class="content">
-                                            <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                            <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                        </div>
-                                    </div>
-                                    <div class="rc-post-item">
-                                        <div class="thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/rc_post02.jpg" alt=""></a>
-                                        </div>
-                                        <div class="content">
-                                            <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                            <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                        </div>
-                                    </div>
-                                    <div class="rc-post-item">
-                                        <div class="thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/rc_post03.jpg" alt=""></a>
-                                        </div>
-                                        <div class="content">
-                                            <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                            <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                        </div>
-                                    </div>
-                                    <div class="rc-post-item">
-                                        <div class="thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/rc_post04.jpg" alt=""></a>
-                                        </div>
-                                        <div class="content">
-                                            <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                            <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                        </div>
-                                    </div>
+                                    <?php } ?>
+
                                 </div>
                             </div>
+
+
                             <div class="blog-widget">
                                 <h4 class="bw-title">Tags</h4>
                                 <div class="bs-tag-list">

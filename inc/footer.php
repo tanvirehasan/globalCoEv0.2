@@ -15,7 +15,7 @@
                                 <p class="h6 text-white mb-3 pt-2">Incorporating Body:</p>
                                 <img src="assets/img/logo/ny.png" width="35%" class="pb-3">
                                 <p class="text-white mb-3 footer-text">DOS ID : 6886942 <br>
-                                    Employer Identification Number (EIN): 93-2089330<br>
+                                    <!-- Employer Identification Number (EIN): 93-2089330<br> -->
                                     This company has been formed under Section 203 of the Limited Liability Company Law of the State of New York.
                                 </p>
                             </div>

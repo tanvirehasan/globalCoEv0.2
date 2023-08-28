@@ -500,7 +500,7 @@
                  <div class="section-title-two text-center mb-50 tg-heading-subheading animation-style3">
                      <span class="sub-title">News & Blogs</span>
                      <h2 class="title tg-element-title">Read Our Latest Updates</h2>
-                     <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
+                     <p>Stay in the loop with our freshest news and advancements. Dive into our latest updates to uncover insights into our ongoing journey of progress and innovation.</p>
                  </div>
              </div>
          </div>

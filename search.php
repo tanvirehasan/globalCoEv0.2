@@ -11,7 +11,7 @@
                      <h2 class="title">Latest Blog</h2>
                      <nav aria-label="breadcrumb">
                          <ol class="breadcrumb">
-                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                              <li class="breadcrumb-item active" aria-current="page">Blog</li>
                          </ol>
                      </nav>
@@ -36,37 +36,50 @@
                          <div class="row">
 
                              <?php
-                                $i = 1;
-                                $blog_data = SelectData('blog', "WHERE resources='0' ORDER BY blog_id DESC");
-                                while ($blogs = $blog_data->fetch_object()) { ?>
 
-                                 <div class="col-md-6">
-                                     <div class="blog-post-item-two">
-                                         <div class="blog-post-thumb-two">
-                                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
-                                             <a href="blog.php?id=<?= $blogs->blog_title ?>" class="tag tag-two"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a>
-                                         </div>
-                                         <div class="blog-post-content-two">
-                                             <h2 class="title"><a href="blog-details.php?id=<?= $blogs->blog_title ?>"><?= $blogs->blog_title ?></a></h2>
-                                             <p>
-                                                 <?php
-                                                    $blog_content = html_entity_decode($blogs->blog_text);
-                                                    $blog_text = strip_tags($blog_content);
-                                                    echo mb_strimwidth($blog_text, 0, 70, "."); ?>
-                                             </p>
-                                             <div class="blog-meta">
-                                                 <ul class="list-wrap">
-                                                     <li>
-                                                         <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/blog_avatar01.png" alt="">Admin</a>
-                                                     </li>
-                                                     <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
+                                if (isset($_POST['search_box'])) {
+                                    if (!empty($_POST['search_text'])) {
 
-                             <?php } ?>
+                                        $search=htmlspecialchars($_POST['search_text']);                              
+
+                                        $blog_data = SelectData('blog', "WHERE blog_title LIKE '%$search%' OR blog_text LIKE '%$search%' ");
+                                        while ($blogs = $blog_data->fetch_object()) { ?>
+
+                                        <div class="col-md-6">
+                                            <div class="blog-post-item-two">
+                                                <div class="blog-post-thumb-two">
+                                                    <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
+                                                    <a href="blog.php?id=<?= $blogs->blog_title ?>" class="tag tag-two"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a>
+                                                </div>
+                                                <div class="blog-post-content-two">
+                                                    <h2 class="title"><a href="blog-details.php?id=<?= $blogs->blog_title ?>"><?= $blogs->blog_title ?></a></h2>
+                                                    <p>
+                                                        <?php
+                                                            $blog_content = html_entity_decode($blogs->blog_text);
+                                                            $blog_text = strip_tags($blog_content);
+                                                            echo mb_strimwidth($blog_text, 0, 70, "."); ?>
+                                                    </p>
+                                                    <div class="blog-meta">
+                                                        <ul class="list-wrap">
+                                                            <li>
+                                                                <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/blog_avatar01.png" alt="">Admin</a>
+                                                            </li>
+                                                            <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <?php }
+                                        }
+                                }
+                             
+                             
+                             
+                             
+                             
+                             ?>
 
 
 
@@ -88,12 +101,13 @@
                  <div class="col-29">
                      <aside class="blog-sidebar">
                          <div class="sidebar-search">
-                             <form action="search.php" method="POST">
+                             <form action="" method="POST">
                                  <input type="text" name="search_text" placeholder="Search Here . . .">
                                  <button type="submit" name="search_box"><i class="flaticon-search"></i></button>
                              </form>
                          </div>
 
+                         <!-- Categories -->
                          <div class="blog-widget">
                              <h4 class="bw-title">Categories</h4>
                              <div class="bs-cat-list">
@@ -108,6 +122,7 @@
                                  </ul>
                              </div>
                          </div>
+
 
                          <div class="blog-widget">
                              <h4 class="bw-title">Recent Posts</h4>
@@ -131,9 +146,9 @@
                                          </div>
                                      </div>
                                  <?php } ?>
+
                              </div>
                          </div>
-
 
 
                          <div class="blog-widget">
