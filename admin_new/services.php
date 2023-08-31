@@ -3,9 +3,9 @@ include "layout/header.php";
 
 if (isset($_POST['add_service'])) {
 
-    $title      = htmlspecialchars($_POST['title']);
-    $fulltext   = htmlspecialchars($_POST['full_text']);
-    $catg_id    = htmlspecialchars($_POST['catg_id']);
+    $title      = htmlspecialchars($_POST['title'], ENT_QUOTES);
+    $fulltext   = htmlspecialchars($_POST['full_text'], ENT_QUOTES);
+    $catg_id    = htmlspecialchars($_POST['catg_id'], ENT_QUOTES);
 
     $target_dir  = "../assets/img/services/";
     $image       = $_FILES["image"]["name"];
@@ -23,9 +23,9 @@ if (isset($_POST['add_service'])) {
 //Update -------------------------
 if (isset($_POST['update_service'])) {
 
-    $title      = htmlspecialchars($_POST['title']);
-    $fulltext   = htmlspecialchars($_POST['full_text']);
-    $catg_id    = htmlspecialchars($_POST['catg_id']);
+    $title      = htmlspecialchars($_POST['title'], ENT_QUOTES);
+    $fulltext   = htmlspecialchars($_POST['full_text'], ENT_QUOTES);
+    $catg_id    = htmlspecialchars($_POST['catg_id'], ENT_QUOTES);
     $target_dir  = "../assets/img/services/";
 
     if ($_FILES["image"]["name"]!='') {
@@ -44,7 +44,7 @@ if (isset($_POST['update_service'])) {
         $featured_image = $_POST['image2'];
     }
 
-    $update = UpdateData('aa_our_services', "title='$title', full_text='$fulltext', catg_id='$catg_id', image='$image', featured_image='$featured_image'   WHERE service_id='{$_GET['service_id']}'");
+    $update = UpdateData('aa_our_services', " title='$title', full_text='$fulltext', catg_id='$catg_id', image='$image', featured_image='$featured_image'   WHERE service_id='{$_GET['service_id']}'");
     // Reconect('services.php');
 
     if ($update==true) {
