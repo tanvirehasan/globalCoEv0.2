@@ -68,6 +68,10 @@
                                 <a href="https://api.whatsapp.com/send?phone=19173653890"> WhatsApp <i class="fab fa-whatsapp ms-2"></i>+1 917 365 3890</a>
                             </div>
                             <div class="header-social">
+                                <ul class="list-wrap">
+                                    <li><a href="#">Website Version: Beta </a></li>
+                                </ul>
+
                                 <!-- <ul class="list-wrap">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
