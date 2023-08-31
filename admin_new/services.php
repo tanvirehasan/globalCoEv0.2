@@ -44,8 +44,14 @@ if (isset($_POST['update_service'])) {
         $featured_image = $_POST['image2'];
     }
 
-    UpdateData('aa_our_services', "title='$title', full_text='$fulltext', catg_id='$catg_id', image='$image', featured_image='$featured_image'   WHERE service_id='{$_GET['service_id']}'");
+    $update = UpdateData('aa_our_services', "title='$title', full_text='$fulltext', catg_id='$catg_id', image='$image', featured_image='$featured_image'   WHERE service_id='{$_GET['service_id']}'");
     // Reconect('services.php');
+
+    if ($update==true) {
+        echo "success";
+    }else{
+        echo "Error: " . $update . "<br>" . $conn->error;
+    }
 }
 
 
