@@ -54,37 +54,12 @@
                 <div class="choose-content-three">
                     <div class="section-title-two white-title mb-30">
                         <span class="sub-title">What Specialty</span>
-                        <h2 class="title">Our Vision, Mission and Values</h2>
+                        <h2 class="title">Our Values, Vision & Mission</h2>
                     </div>
-                    <p>Ever find yourself staring at your computer s good consulting slogan to come to mind? Oftentimes.</p>
+
                     <div class="accordion-wrap-two">
                         <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Our Vision
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>The vision of Global Center of Excellence is to create a world where individuals are empowered to achieve their full potential and make a lasting impact in their chosen fields. We envision a future where our certifications are globally recognized as the gold standard, earning the trust and respect of employers, professionals, and industries alike.</p>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Our Mission
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>The mission of Global Center of Excellence is to provide individuals with industry-leading certifications in both soft and hard skills, empowering individuals to showcase their expertise, enhance their job prospects, and drive personal and professional growth.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -103,6 +78,38 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Our Vision
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>The vision of Global Center of Excellence is to create a world where individuals are empowered to achieve their full potential and make a lasting impact in their chosen fields. We envision a future where our certifications are globally recognized as the gold standard, earning the trust and respect of employers, professionals, and industries alike.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Our Mission
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>The mission of Global Center of Excellence is to provide individuals with industry-leading certifications in both soft and hard skills, empowering individuals to showcase their expertise, enhance their job prospects, and drive personal and professional growth.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
                         </div>
                     </div>
                 </div>
