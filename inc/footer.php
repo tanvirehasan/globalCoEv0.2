@@ -39,7 +39,7 @@
 
                     <div class="col-md-4" id="email">
                         <div class="footer-widget">
-                            <h4 class="fw-title">Subscribe to Our Newsletter</h4>
+                            <h4 class="fw-title">Subscribe to our monthly newsletter</h4>
                             <div class="footer-newsletter">
                                 <p>Sign up to get monthly newsletter to get the latest updates.</p>
                                 <form action="user_email.php" method="POST">

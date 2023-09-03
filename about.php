@@ -29,6 +29,19 @@
 <section class="about-area-eight pt-120 pb-120">
     <div class="container">
         <?php echo $postcontent = html_entity_decode(About_Us('about_text')); ?>
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-5">
+            <div class="Values p-5">
+                <h2>Our Values</h2>
+                <ol>
+                    <li><strong>Excellence:</strong>We are committed to upholding the highest standards of quality, and our certifications reflect a true mastery of skills and knowledge.</li>
+                    <li><strong>Integrity:</strong>We operate with honesty, transparency, and fairness in all our processes, ensuring trust in our certifications and maintaining the reputation of our organization.</li>
+                    <li><strong>Innovation:</strong>We continuously strive to stay ahead of industry trends and technological advancements, ensuring that our certifications remain relevant and aligned with the evolving needs of professionals and industries.</li>
+                    <li><strong>Teamwork:</strong>We foster a culture of collaboration and partnership, working closely with industry experts, employers, and professionals to co-create certifications that meet the ever-changing demands of the job market.</li>
+                    <li><strong>Global Perspective:</strong>We recognize the interconnectedness of today's professional landscape and strive to offer certifications that have a global perspective, enabling professionals to thrive in international markets.</li>
+                </ol>
+            </div>
+        </div>
     </div>
 </section>
 <!-- about-area-end -->
@@ -127,20 +140,6 @@
                     <P> We believe that a well-rounded skill set encompassing both interpersonal capabilities and technical expertise is essential for individuals to thrive and contribute effectively in their careers. </P>
                     <P>Through our rigorous certification programs, we strive to validate and elevate individuals' competence in crucial soft skills required for effective communication, collaboration, leadership, problem-solving, and adaptability. Additionally, we aim to equip individuals with the functional skills such as project management, quality assurance, HR analytics, data analysis, cybersecurity, and more. We pay attention to bridge the gap between technical and soft skills, recognizing the indispensability of both in professional success.</P>
                     <P>Ultimately, our goal is to empower individuals to reach their full potential, fostering a skilled workforce that not only excels in their specialized fields but also excels in collaboration, leadership, and communication. We firmly believe that by combining technical proficiency with effective soft skills, individuals can make a significant impact and contribute to the growth and success of organizations and society as a whole.</P>
-                </div>
-            </div>
-
-
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-5">
-                <div class="Values p-5">
-                    <h2>Our Values</h2>
-                    <ol>
-                        <li><strong>Excellence:</strong>We are committed to upholding the highest standards of quality, and our certifications reflect a true mastery of skills and knowledge.</li>
-                        <li><strong>Integrity:</strong>We operate with honesty, transparency, and fairness in all our processes, ensuring trust in our certifications and maintaining the reputation of our organization.</li>
-                        <li><strong>Innovation:</strong>We continuously strive to stay ahead of industry trends and technological advancements, ensuring that our certifications remain relevant and aligned with the evolving needs of professionals and industries.</li>
-                        <li><strong>Teamwork:</strong>We foster a culture of collaboration and partnership, working closely with industry experts, employers, and professionals to co-create certifications that meet the ever-changing demands of the job market.</li>
-                        <li><strong>Global Perspective:</strong>We recognize the interconnectedness of today's professional landscape and strive to offer certifications that have a global perspective, enabling professionals to thrive in international markets.</li>
-                    </ol>
                 </div>
             </div>
 

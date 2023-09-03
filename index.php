@@ -74,7 +74,7 @@
  <div class="brand-aera-two pb-80">
      <div class="container">
 
-         <h2 class="text-center py-5">Clients served by our Centers:</h2>
+         <h2 class="text-center py-5">Clients served by our CEO:</h2>
 
          <div class="row brand-active">
 
