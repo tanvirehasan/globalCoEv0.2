@@ -167,7 +167,7 @@
                 <div class="section-title text-center mb-50">
                     <span class="sub-title">Skilled Team Members</span>
                     <h2 class="title">Meet Our Dedicated Team</h2>
-                    <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
+                    
                 </div>
             </div>
         </div>
