@@ -3,10 +3,10 @@ include "layout/header.php";
 
 if (isset($_POST['add_blog'])) {
 
-    $title      = htmlspecialchars($_POST['title']);
-    $fulltext   = htmlspecialchars($_POST['full_text']);
-    $catg_id    = htmlspecialchars($_POST['catg_id']);
-    $resouce    = htmlspecialchars($_POST['resouce_active']);
+    $title      = htmlspecialchars($_POST['title'], ENT_QUOTES);
+    $fulltext   = htmlspecialchars($_POST['full_text'], ENT_QUOTES);
+    $catg_id    = htmlspecialchars($_POST['catg_id'], ENT_QUOTES);
+    $resouce    = htmlspecialchars($_POST['resouce_active'], ENT_QUOTES);
 
     $target_dir = "../assets/img/blog/";
     $image      = $_FILES["image"]["name"];
@@ -17,8 +17,9 @@ if (isset($_POST['add_blog'])) {
 }
 
 if (isset($_POST['update_blog'])) {
-    $fulltext = htmlspecialchars($_POST['full_text']);
-    UpdateData('blog', "blog_title='{$_POST['title']}', blog_catagory='{$_POST['catg_id']}', blog_text='$fulltext', resources='{$_POST['resouce_active']}' WHERE blog_id='{$_GET['blogs_id']}'");
+    $title    = htmlspecialchars($_POST['title'], ENT_QUOTES);
+    $fulltext = htmlspecialchars($_POST['full_text'], ENT_QUOTES);
+    UpdateData('blog', "blog_title='$title', blog_catagory='{$_POST['catg_id']}', blog_text='$fulltext', resources='{$_POST['resouce_active']}' WHERE blog_id='{$_GET['blogs_id']}'");
     // Reconect('blog.php');
 }
 
