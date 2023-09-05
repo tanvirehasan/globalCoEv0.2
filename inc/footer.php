@@ -67,11 +67,11 @@
                     <div class="col-md-6">
                         <div class="footer-social">
                             <ul class="list-wrap">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/GlobalCenterofExcellenceLLC"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/gcofex"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/gcoe"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.pinterest.com/globalcenterofexcellence/"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="www.youtube.com/@GlobalCenterofExcellence"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>

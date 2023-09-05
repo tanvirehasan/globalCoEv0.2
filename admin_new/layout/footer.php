@@ -1,6 +1,6 @@
         </div>
-      </div>
-    </div>
+        </div>
+        </div>
         <!-- ============= FOOTER ================= -->
         <footer class="footer">
 
@@ -18,18 +18,31 @@
                 }
               });
             });
-          </script>
 
-
-          <script>
             tinymce.init({
               selector: 'textarea#texteditro',
               height: 800,
               plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
               toolbar: 'insertfile blocks fontfamily fontsize forecolor backcolor | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
             });
+
+
+            $(document).ready(function() {
+              $('#data_table').DataTable();
+            });
           </script>
+
+
+          <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+
+
+
+
+
+
 
         </footer>
         </body>
-      </html>
+
+        </html>

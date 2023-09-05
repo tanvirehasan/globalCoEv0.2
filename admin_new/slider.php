@@ -35,7 +35,7 @@ if (isset($_POST['slider_update'])) {
     $image = $_POST['image2'];
   }
 
-   UpdateData('a_slider', "slider_title='$slider_title', short_text='$short_text', btn_text='$btn_text', btn_url='$btn_url', image_file='$image'   WHERE slider_id='{$_GET['edit']}'");
+  UpdateData('a_slider', "slider_title='$slider_title', short_text='$short_text', btn_text='$btn_text', btn_url='$btn_url', image_file='$image'   WHERE slider_id='{$_GET['edit']}'");
   // Reconect('slider.php');
 }
 
@@ -55,7 +55,6 @@ if (isset($_GET['delete'])) {
     <h5 class="text-uppercase">Slider</h5>
   </div>
   <div class="card-body">
-
 
     <?php
 
@@ -94,11 +93,13 @@ if (isset($_GET['delete'])) {
 
     <?php  } ?>
 
+  </div>
+</div>
 
 
-
-
-    <table class="table table-striped mt-3" style="width: 100%;">
+<div class="card">
+  <div class="card-body">
+    <table id="data_table" class="table table-striped mt-3" style="width: 100%;">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -123,10 +124,11 @@ if (isset($_GET['delete'])) {
           <td><a href="slider.php?edit=<?= $row->slider_id ?>"">Edit</a> | <a href=" slider.php?delete=<?= $row->slider_id ?>">Delete</a></td>
         </tr>
       <?php } ?>
-
-
     </table>
   </div>
 </div>
+
+
+
 
 <?php include "layout/footer.php"; ?>

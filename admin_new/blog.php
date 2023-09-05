@@ -151,11 +151,12 @@ if (isset($_GET['delete_id'])) {
             </div>
         </div>
         <div class="table-responsive">
-            <table id="data_table" class="table table-bordered table-striped mb-0">
+            <table id="data_table" class="table table-bordered table-striped mb-0" style="width: 100%;">
                 <thead>
                     <tr>
                         <th>SL</th>
                         <th>Name</th>
+                        <th>Catagory</th>
                         <th>image</th>
                         <th>Action</th>
                     </tr>
@@ -170,8 +171,9 @@ if (isset($_GET['delete_id'])) {
                         <tr>
                             <td><?= $i++ ?></td>
                             <td><?= $blogs->blog_title ?></td>
-                            <td> <img src="../upload/blog/<?= $blogs->blog_image ?>" alt="" width="20%"> </td>
-                            <td>
+                            <td><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></td>
+                            <td style="width: 100px;"> <img src="../assets/img/blog/<?= $blogs->blog_image ?>" alt="" width="100%"> </td>
+                            <td style="width: 150px;">
                                 <a href="blog.php?blogs_id=<?= $blogs->blog_id ?>" class="btn btn-warning btn-sm text-white">Edit</a>
                                 <a href="blog.php?delete_id=<?= $blogs->blog_id ?>" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm text-white">Delete</a>
                             </td>

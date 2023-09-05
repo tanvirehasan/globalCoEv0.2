@@ -29,19 +29,6 @@
 <section class="about-area-eight pt-120 pb-120">
     <div class="container">
         <?php echo $postcontent = html_entity_decode(About_Us('about_text')); ?>
-
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-5">
-            <div class="Values p-5">
-                <h2>Our Values</h2>
-                <ol>
-                    <li><strong>Excellence:</strong>We are committed to upholding the highest standards of quality, and our certifications reflect a true mastery of skills and knowledge.</li>
-                    <li><strong>Integrity:</strong>We operate with honesty, transparency, and fairness in all our processes, ensuring trust in our certifications and maintaining the reputation of our organization.</li>
-                    <li><strong>Innovation:</strong>We continuously strive to stay ahead of industry trends and technological advancements, ensuring that our certifications remain relevant and aligned with the evolving needs of professionals and industries.</li>
-                    <li><strong>Teamwork:</strong>We foster a culture of collaboration and partnership, working closely with industry experts, employers, and professionals to co-create certifications that meet the ever-changing demands of the job market.</li>
-                    <li><strong>Global Perspective:</strong>We recognize the interconnectedness of today's professional landscape and strive to offer certifications that have a global perspective, enabling professionals to thrive in international markets.</li>
-                </ol>
-            </div>
-        </div>
     </div>
 </section>
 <!-- about-area-end -->
@@ -106,10 +93,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -124,10 +107,51 @@
 </section>
 <!-- choose-area-end -->
 
+
+<!-- brand-area -->
+<div class="brand-area-six pt-80 pb-80">
+    <div class="container">
+
+        <h2 class="text-center py-5">Clients served by our CEO:</h2>
+        <div class="row brand-active">
+            <?php
+            $data = SelectData('our_clients', '');
+            while ($row = $data->fetch_object()) { ?>
+                <div class="col-lg-12">
+                    <div class="brand-item">
+                        <img src="assets/img/brand/<?= $row->client_logo ?>" alt="">
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+<!-- brand-area-end -->
+
+
+
+
+
 <!-- Our Vision, Mission and Values full  -->
 <section class="team-area team-bg" data-background="assets/img/bg/team_bg.jpg">
     <div class="container">
         <div class="row">
+
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 my-5">
+                <div class="Values p-5">
+                    <h2>Our Values</h2>
+                    <ol>
+                        <li><strong>Excellence:</strong>We are committed to upholding the highest standards of quality, and our certifications reflect a true mastery of skills and knowledge.</li>
+                        <li><strong>Integrity:</strong>We operate with honesty, transparency, and fairness in all our processes, ensuring trust in our certifications and maintaining the reputation of our organization.</li>
+                        <li><strong>Innovation:</strong>We continuously strive to stay ahead of industry trends and technological advancements, ensuring that our certifications remain relevant and aligned with the evolving needs of professionals and industries.</li>
+                        <li><strong>Teamwork:</strong>We foster a culture of collaboration and partnership, working closely with industry experts, employers, and professionals to co-create certifications that meet the ever-changing demands of the job market.</li>
+                        <li><strong>Global Perspective:</strong>We recognize the interconnectedness of today's professional landscape and strive to offer certifications that have a global perspective, enabling professionals to thrive in international markets.</li>
+                    </ol>
+                </div>
+            </div>
+
+
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 equal-height-cols">
                 <div class="vision p-5" style="background-color: #00BFFF;">
                     <h2>Our Vision</h2>
@@ -165,9 +189,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-8">
                 <div class="section-title text-center mb-50">
-                    <span class="sub-title">Skilled Team Members</span>
                     <h2 class="title">Meet Our Dedicated Team</h2>
-                    
                 </div>
             </div>
         </div>
@@ -256,43 +278,5 @@
 </section> -->
 <!-- testimonial-area-end -->
 
-<!-- brand-area -->
-<div class="brand-area-six pt-80 pb-80">
-    <div class="container">
-        <div class="row brand-active">
-            <div class="col-lg-12">
-                <div class="brand-item">
-                    <img src="assets/img/brand/brand_img01.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="brand-item">
-                    <img src="assets/img/brand/brand_img02.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="brand-item">
-                    <img src="assets/img/brand/brand_img03.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="brand-item">
-                    <img src="assets/img/brand/brand_img04.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="brand-item">
-                    <img src="assets/img/brand/brand_img05.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="brand-item">
-                    <img src="assets/img/brand/brand_img03.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- brand-area-end -->
 
 <?php require_once 'inc/footer.php' ?>
