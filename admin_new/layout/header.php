@@ -82,6 +82,19 @@ include "../config/functions.php";
             </li>
 
 
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#blog-collapse" aria-expanded="false">
+                Settings
+              </button>
+              <div class="collapse" id="blog-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="settings.php" class="link-dark rounded">New</a></li>
+                  <li><a href="blog_catagory.php" class="link-dark rounded">Blog Catagory</a></li>
+                </ul>
+              </div>
+            </li>
+
+
 
 
           </ul>
