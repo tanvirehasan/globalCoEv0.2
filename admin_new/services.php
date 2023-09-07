@@ -101,7 +101,7 @@ if (isset($_GET['delete_id'])) {
                     </div>
                     <div class="col-md-6">
                         <label for="categoryname" class=" form-label" style="font-weight:700;">Featured Image</label><br>
-                        <img src="../assets/img/services/<?= $service->featured_image ?>" alt="">
+                        <img src="../assets/img/services/<?= $service->featured_image ?>" alt="" style="width: 100%;">
                         <input type="file" class="form-control mb-4 " name="featured_image">
                         <input type="text" value="<?php echo $service->featured_image?>" name="image2" hidden>
 
