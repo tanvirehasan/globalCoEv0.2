@@ -189,7 +189,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-8">
                 <div class="section-title text-center mb-50">
-                    <h2 class="title">Meet Our Dedicated Team</h2>
+                    <h2 class="title">Meet Our CEO</h2>
                 </div>
             </div>
         </div>

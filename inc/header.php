@@ -100,7 +100,7 @@
                                             <ul class="sub-menu">
                                                 <li><a href="about.php">About</a></li>
                                                 <li><a href="team-details.php?id=Quazi%20M.%20Ahmed">CEO Profile</a></li>
-                                                <li><a href="team.php">Our Team</a></li>
+                                                <!-- <li><a href="team.php">Our Team</a></li> -->
                                             </ul>
                                             <div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>
                                         </li>
