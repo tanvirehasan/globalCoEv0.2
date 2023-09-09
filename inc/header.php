@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
-                                        <li class="active"><a href="index.php">Home</a></li>
+                                        <li class="active"><a href="/">Home</a></li>
                                         <li class="menu-item-has-children"><a href="#">About Us</a>
                                             <ul class="sub-menu">
                                                 <li><a href="about.php">About</a></li>
