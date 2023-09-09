@@ -243,25 +243,40 @@
          </div>
      </div>
      <div class="container custom-container">
-         <div class="row justify-content-center">
-
+         <div class="row justify-content-center ">
 
              <?php
-                $pro_data = SelectData('blog', "WHERE resources='2'  ORDER BY blog_id DESC limit 3 ");
-                while ($projects = $pro_data->fetch_object()) { ?>
+                $blog_data = SelectData('blog', "WHERE resources='2' ORDER BY blog_id DESC limit 3");
+                while ($blogs = $blog_data->fetch_object()) { ?>
+
                  <div class="col-lg-4 col-md-6 col-sm-10">
-                     <div class="project-item-two">
-                         <div class="project-thumb-two">
-                             <img src="assets/img/blog/<?= $projects->blog_image ?>" alt="">
+                     <div class="blog-post-item-two">
+                         <div class="blog-post-thumb-two">
+                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
+                             <a href="blog.php" class="tag"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a>
                          </div>
-                         <div class="project-content-two">
-                             <h2 class="title"><a href="blog-details.php?id=<?= $projects->blog_title ?>"><?= $projects->blog_title ?></a></h2>
-                             <span><?= postcate('blog_cate_title', $projects->blog_catagory) ?></span>
-                             <a href="blog-details.php?id=<?= $projects->blog_title ?>" class="link-btn"><i class="fas fa-chevron-right"></i></a>
+                         <div class="blog-post-content-two">
+                             <h2 class="title"><a href="blog-details.php?id=<?= $blogs->blog_title ?>"><?php echo $blogs->blog_title ?></a></h2>
+                             <p>
+                                 <?php
+                                    $blog_content = html_entity_decode($blogs->blog_text);
+                                    $blog_text = strip_tags($blog_content);
+                                    echo mb_strimwidth($blog_text, 0, 70, "."); ?>
+                             </p>
+                             <div class="blog-meta">
+                                 <ul class="list-wrap">
+                                     <li>
+                                         <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/blog_avatar01.png" alt="">Admin</a>
+                                     </li>
+                                     <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
+                                 </ul>
+                             </div>
                          </div>
                      </div>
                  </div>
+
              <?php } ?>
+
 
 
 
@@ -503,11 +518,10 @@
                  </div>
              </div>
          </div>
+
          <div class="row justify-content-center">
 
-
              <?php
-                $i = 1;
                 $blog_data = SelectData('blog', "WHERE resources='0' ORDER BY blog_id DESC limit 3");
                 while ($blogs = $blog_data->fetch_object()) { ?>
 
