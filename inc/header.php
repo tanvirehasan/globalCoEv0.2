@@ -6,9 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Global Center of Excellence, LLC</title>
-    <meta name="description" content="Gerow - Business Consulting HTML Template">
+    <meta name="description" content="The Global Center of Excellence, LLC is a New York, USA-based human capacity building organization renowned for its commitment to excellence and expertise in training & coaching professionals across various industries. With a mission to elevate skill sets, enhance knowledge, and ensure quality standards, the Global Center of Excellence offers a wide range of certifications that empower individual">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <base href="http://192.168.68.104/globalCoEv0.2/"> -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
