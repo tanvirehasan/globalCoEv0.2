@@ -74,7 +74,7 @@
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>The vision of Global Center of Excellence is to create a world where individuals are empowered to achieve their full potential and make a lasting impact in their chosen fields. We envision a future where our certifications are globally recognized as the gold standard, earning the trust and respect of employers, professionals, and industries alike.</p>
+                                        <p>The Global Center of Excellence envisions a world where individuals and organizations thrive through continuous learning and development. As a beacon of knowledge and innovation, we serve as the pinnacle of excellence, offering a diverse range of cutting-edge programs and certifications.</p>
 
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>The mission of Global Center of Excellence is to provide individuals with industry-leading certifications in both soft and hard skills, empowering individuals to showcase their expertise, enhance their job prospects, and drive personal and professional growth.
+                                        <p>Our mission is to empower learners worldwide, fostering a culture of growth, adaptability, and mastery. Through collaborative partnerships, we cultivate a community of experts, driving forward the frontiers of human potential. Together, we shape the future by equipping individuals and organizations with the skills, knowledge, and certifications they need to excel in an ever-evolving global landscape.
                                         </p>
                                     </div>
                                 </div>
