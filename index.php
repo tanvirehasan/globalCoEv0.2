@@ -262,15 +262,7 @@
                                     $blog_content = html_entity_decode($blogs->blog_text);
                                     $blog_text = strip_tags($blog_content);
                                     echo mb_strimwidth($blog_text, 0, 70, "."); ?>
-                             </p>
-                             <div class="blog-meta">
-                                 <ul class="list-wrap">
-                                     <li>
-                                         <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/blog_avatar01.png" alt="">Admin</a>
-                                     </li>
-                                     <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
-                                 </ul>
-                             </div>
+                             </p>                             
                          </div>
                      </div>
                  </div>
