@@ -62,13 +62,7 @@
                              </ul>
                          </div>
                      </div>
-                     <div class="services-widget">
-                         <h4 class="sw-title">Brochure</h4>
-                         <div class="services-brochure-wrap">
-                             <p>when an unknown printer took ga lley offer typey anddey.</p>
-                             <a href="<?= $cours->doc_pdf_url ?>" target="_blank" download class="download-btn"><i class="far fa-file-pdf"></i>PDF. Download</a>
-                         </div>
-                     </div>
+                     
                      <!-- <div class="services-widget services-sidebar-contact">
                          <h4 class="title">If You Need Any Help Contact With Us</h4>
                          <a href="tel:0123456789"><i class="flaticon-phone-call"></i> +91 705 2101 786</a>
