@@ -235,9 +235,9 @@
                      <h2 class="title tg-element-title">Some of our recently completed projects</h2>
                  </div>
              </div>
-             <div class="col-lg-6 col-md-10">
-                 <div class="project-content-top">
-                     <!-- <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p> -->
+             <div class="col-lg-6 col-md-4">
+                 <div class="view-all-btn text-end mb-30">
+                     <a href="project.php" class="btn">See All Project</a>
                  </div>
              </div>
          </div>
@@ -262,7 +262,7 @@
                                     $blog_content = html_entity_decode($blogs->blog_text);
                                     $blog_text = strip_tags($blog_content);
                                     echo mb_strimwidth($blog_text, 0, 70, "."); ?>
-                             </p>                             
+                             </p>
                          </div>
                      </div>
                  </div>
