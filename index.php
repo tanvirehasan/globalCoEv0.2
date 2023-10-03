@@ -20,7 +20,7 @@
                      </div>
                  </div>
                  <div class="slider-shape">
-                     <img src="assets/img/banner/banner_shape.png" alt="" data-animation="zoomIn" data-delay=".8s">
+                     <img src="assets/img/banner/banner_shape.png" alt="<?= $row->slider_title ?>" data-animation="zoomIn" data-delay=".8s">
                  </div>
              </div>
          <?php } ?>
@@ -34,8 +34,8 @@
          <div class="row align-items-center justify-content-center">
              <div class="col-lg-6 col-md-9">
                  <div class="about-img-wrap-three">
-                     <img src="assets/img/images/h2_about_img01.jpg" alt="" data-aos="fade-down-right" data-aos-delay="0">
-                     <img src="assets/img/images/h2_about_img02.jpg" alt="" data-aos="fade-left" data-aos-delay="400">
+                     <img src="assets/img/images/h2_about_img01.jpg" alt="about us" data-aos="fade-down-right" data-aos-delay="0">
+                     <img src="assets/img/images/h2_about_img02.jpg" alt="about us" data-aos="fade-left" data-aos-delay="400">
                      <div class="experience-wrap" data-aos="fade-up" data-aos-delay="300">
                          <!-- <h2 class="title">18 <span>Years</span></h2>
                          <p>of International Experience in Learning & Development Sector.</p> -->
@@ -61,9 +61,9 @@
          </div>
      </div>
      <div class="about-shape-wrap-two">
-         <img src="assets/img/images/h2_about_shape01.png" alt="">
-         <img src="assets/img/images/h2_about_shape02.png" alt="">
-         <img src="assets/img/images/h2_about_shape03.png" alt="" data-aos="fade-left" data-aos-delay="500">
+         <img src="assets/img/images/h2_about_shape01.png" alt="about us">
+         <img src="assets/img/images/h2_about_shape02.png" alt="about us">
+         <img src="assets/img/images/h2_about_shape03.png" alt="about us" data-aos="fade-left" data-aos-delay="500">
      </div>
  </section>
  <!-- about-area-end -->
@@ -81,7 +81,7 @@
                 while ($row = $data->fetch_object()) { ?>
                  <div class="col-lg-12">
                      <div class="brand-item">
-                         <img src="assets/img/brand/<?= $row->client_logo ?>" alt="">
+                         <img src="assets/img/brand/<?= $row->client_logo ?>" alt="<?= $row->client_name ?>">
                      </div>
                  </div>
              <?php } ?>
@@ -118,9 +118,9 @@
                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                      <div class="services-item-two">
                          <div class="services-thumb-two">
-                             <img src="assets/img/services/<?= $catagorys->thamnil ?>" alt="">
+                             <img src="assets/img/services/<?= $catagorys->thamnil ?>" alt="<?= $catagorys->cat_title ?>">
                              <div class="item-shape">
-                                 <img src="assets/img/services/services_item_shape.png" alt="">
+                                 <img src="assets/img/services/services_item_shape.png" alt="<?= $catagorys->cat_title ?>">
                              </div>
                          </div>
                          <div class="services-content-two">
@@ -148,9 +148,9 @@
          <div class="row align-items-center justify-content-center">
              <div class="col-lg-6 col-md-10">
                  <div class="overview-img-wrap">
-                     <img src="assets/img/images/overview_img01.jpg" alt="">
+                     <img src="assets/img/images/overview_img01.jpg" alt="Why Training Matters">
                      <!-- <img src="assets/img/images/overview_img02.jpg" alt="" data-parallax='{"x" : 50 }'> -->
-                     <img src="assets/img/images/overview_img_shape.png" alt="">
+                     <img src="assets/img/images/overview_img_shape.png" alt="Why Training Matters">
                      <div class="icon">
                          <i class="flaticon-report-1"></i>
                      </div>
@@ -252,7 +252,7 @@
                  <div class="col-lg-4 col-md-6 col-sm-10">
                      <div class="blog-post-item-two">
                          <div class="blog-post-thumb-two">
-                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
+                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt="<?= $blogs->blog_title ?>"></a>
                              <a href="blog.php" class="tag"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a>
                          </div>
                          <div class="blog-post-content-two">
@@ -520,7 +520,7 @@
                  <div class="col-lg-4 col-md-6 col-sm-10">
                      <div class="blog-post-item-two">
                          <div class="blog-post-thumb-two">
-                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
+                             <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt="<?= $blogs->blog_title ?>"></a>
                              <a href="blog.php" class="tag"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a>
                          </div>
                          <div class="blog-post-content-two">
@@ -534,7 +534,7 @@
                              <div class="blog-meta">
                                  <ul class="list-wrap">
                                      <li>
-                                         <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/blog_avatar01.png" alt="">Admin</a>
+                                         <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/blog_avatar01.png" alt="User">Admin</a>
                                      </li>
                                      <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
                                  </ul>
