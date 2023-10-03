@@ -70,7 +70,6 @@
                                 <ul class="list-wrap">
                                     <li><a href="#">Website Version: Beta </a></li>
                                 </ul>
-
                                 <!-- <ul class="list-wrap">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -91,7 +90,7 @@
                         <div class="menu-wrap">
                             <nav class="menu-nav">
                                 <div class="logo">
-                                    <a href="index.php"><img style="" src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="index.php"><img src="assets/img/logo/logo.png" alt="Logo"></a>
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
@@ -104,8 +103,6 @@
                                             </ul>
                                             <div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>
                                         </li>
-
-
                                         <li><a href="services.php">Services</a></li>
                                         <li><a href="services.php">Events</a></li>
                                         <li><a href="blog.php">Blog</a></li>
@@ -179,7 +176,6 @@
             </div>
         </div>
         <!-- header-search-end -->
-
     </header>
     <!-- header-area-end -->
 
