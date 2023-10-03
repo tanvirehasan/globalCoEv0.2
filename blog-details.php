@@ -81,7 +81,7 @@ if (isset($_GET['id'])) {
                                     <li><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($blogs->blog_date_time)) ?></li>
                                     <li><img src="assets/img/blog/blog_avatar01.png" alt=""> by <a href="blog-details.html">Admin</a></li>
                                     <li><i class="fas fa-tags"></i> <a href="blog.php"><?= postcate('blog_cate_title', $blogs->blog_catagory) ?></a></li>
-                                    <li><i class="flaticon-speech-bubble"></i><a href="blog-details.html">05 Comments</a></li>
+                                    <!-- <li><i class="flaticon-speech-bubble"></i><a href="blog-details.html">05 Comments</a></li> -->
                                 </ul>
                             </div>
 
@@ -214,7 +214,7 @@ if (isset($_GET['id'])) {
                                         <?php
                                         $teab_data = SelectData('blog_catagory', "limit 10");
                                         while ($catagorys = $teab_data->fetch_object()) { ?>
-                                            <li><a href="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?> <span>
+                                            <li><a href="#"><?= $catagorys->blog_cate_title ?> <span>
                                                         <?= rowcount('blog', "where blog_catagory='{$catagorys->blog_cata_id}'") ?>
                                                     </span></a></li>
                                         <?php } ?>

@@ -77,7 +77,7 @@
          <h2 class="text-center py-5">Clients served by our CEO:</h2>
          <div class="row brand-active">
              <?php
-                $data = SelectData('our_clients', '');
+                $data = SelectData('our_clients', 'limit 7');
                 while ($row = $data->fetch_object()) { ?>
                  <div class="col-lg-12">
                      <div class="brand-item">
