@@ -68,88 +68,10 @@
 
                              <?php } ?>
 
-
-
-                         </div>
-                         <div class="pagination-wrap mt-30">
-                             <nav aria-label="Page navigation example">
-                                 <ul class="pagination list-wrap">
-                                     <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                     <li class="page-item next-page"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                                 </ul>
-                             </nav>
-                         </div>
+                            </div>
                      </div>
                  </div>
-                 <div class="col-29">
-                     <aside class="blog-sidebar">
-                         <div class="sidebar-search">
-                             <form action="search.php" method="POST">
-                                 <input type="text" name="search_text" placeholder="Search Here . . .">
-                                 <button type="submit" name="search_box"><i class="flaticon-search"></i></button>
-                             </form>
-                         </div>
-
-                         <div class="blog-widget">
-                             <h4 class="bw-title">Categories</h4>
-                             <div class="bs-cat-list">
-                                 <ul class="list-wrap">
-                                     <?php
-                                        $teab_data = SelectData('blog_catagory', "limit 10");
-                                        while ($catagorys = $teab_data->fetch_object()) { ?>
-                                         <li><a href="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?> <span>
-                                                     <?= rowcount('blog', "where blog_catagory='{$catagorys->blog_cata_id}'") ?>
-                                                 </span></a></li>
-                                     <?php } ?>
-                                 </ul>
-                             </div>
-                         </div>
-
-                         <div class="blog-widget">
-                             <h4 class="bw-title">Recent Posts</h4>
-                             <div class="rc-post-wrap">
-                                 <?php
-                                    $datas = SelectData('blog', "limit 5");
-                                    while ($recent_posts = $datas->fetch_object()) { ?>
-                                     <div class="rc-post-item">
-                                         <div class="thumb">
-                                             <a href="blog-details.php?id=<?= $recent_posts->blog_title ?>"><img src="assets/img/blog/<?= $recent_posts->blog_image ?>" height="60px"></a>
-                                         </div>
-                                         <div class="content">
-                                             <span class="date"><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($recent_posts->blog_date_time)) ?></span>
-                                             <h6 class="p-0 m-0"><a href="blog-details.php?id=<?= $recent_posts->blog_title ?>">
-                                                     <?php
-                                                        $rblog_content = html_entity_decode($recent_posts->blog_title);
-                                                        $rblog_text = strip_tags($rblog_content);
-                                                        echo mb_strimwidth($rblog_text, 0, 35, "..."); ?>
-                                                 </a>
-                                             </h6>
-                                         </div>
-                                     </div>
-                                 <?php } ?>
-                             </div>
-                         </div>
-
-
-
-                         <div class="blog-widget">
-                             <h4 class="bw-title">Tags</h4>
-                             <div class="bs-tag-list">
-                                 <ul class="list-wrap">
-                                     <li><a href="#">Finance</a></li>
-                                     <li><a href="#">Consultancy</a></li>
-                                     <li><a href="#">Data</a></li>
-                                     <li><a href="#">Agency</a></li>
-                                     <li><a href="#">Travel</a></li>
-                                 </ul>
-                             </div>
-                         </div>
-                     </aside>
-                 </div>
+                 
              </div>
          </div>
      </div>
