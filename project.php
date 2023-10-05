@@ -40,7 +40,7 @@
                                 $blog_data = SelectData('blog', "WHERE resources='2' ORDER BY blog_id DESC");
                                 while ($blogs = $blog_data->fetch_object()) { ?>
 
-                                 <div class="col-md-6">
+                                 <div class="col-md-4">
                                      <div class="blog-post-item-two">
                                          <div class="blog-post-thumb-two">
                                              <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
