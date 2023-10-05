@@ -89,44 +89,6 @@ if (isset($_GET['id'])) {
                         </div>
                     </div>
 
-
-
-
-                    <div class="col-29">
-                        <aside class="blog-sidebar">
-                            <div class="sidebar-search">
-                                <form action="#">
-                                    <input type="text" placeholder="Search Here . . .">
-                                    <button type="submit"><i class="flaticon-search"></i></button>
-                                </form>
-                            </div>
-                            <div class="blog-widget">
-                                <h4 class="bw-title">Recent Posts</h4>
-                                <div class="rc-post-wrap">
-                                    <?php
-                                    $datas = SelectData('blog', "limit 10");
-                                    while ($recent_posts = $datas->fetch_object()) { ?>
-                                        <div class="rc-post-item">
-                                            <div class="thumb">
-                                                <a href="blog-details.php?id=<?= $recent_posts->blog_title ?>"><img src="assets/img/blog/<?= $recent_posts->blog_image ?>" height="60px"></a>
-                                            </div>
-                                            <div class="content">
-                                                <span class="date"><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($recent_posts->blog_date_time)) ?></span>
-                                                <h6 class="p-0 m-0"><a href="blog-details.php?id=<?= $recent_posts->blog_title ?>">
-                                                        <?php
-                                                        $rblog_content = html_entity_decode($recent_posts->blog_title);
-                                                        $rblog_text = strip_tags($rblog_content);
-                                                        echo mb_strimwidth($rblog_text, 0, 35, "..."); ?>
-                                                    </a>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    <?php } ?>
-
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
                 </div>
             </div>
         </div>

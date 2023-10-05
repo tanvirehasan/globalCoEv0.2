@@ -79,10 +79,15 @@
             </div>
         </div>
     </div>
+
+
+    <div class="whatsapp"> <a href="https://api.whatsapp.com/send?phone=19173653890"><img src="assets/img/logo/whatsapp.png" alt="whatsapp"></a> </div>
+
+
+
 </footer>
 
 <!-- footer-area-end -->
-
 
 <!-- JS here -->
 <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>

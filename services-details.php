@@ -67,7 +67,7 @@
                          <h4 class="title">If You Need Any Help Contact With Us</h4>
                          <a href="tel:0123456789"><i class="flaticon-phone-call"></i> +91 705 2101 786</a>
                      </div> -->
-                     <div class="services-widget">
+                     <!-- <div class="services-widget">
                          <h4 class="sw-title">Get a Free Quote</h4>
                          <div class="services-widget-form">
                              <form action="#">
@@ -83,7 +83,7 @@
                                  <button type="submit" class="submit-btn">Send Message</button>
                              </form>
                          </div>
-                     </div>
+                     </div> -->
                  </aside>
              </div>
          </div>

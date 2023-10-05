@@ -31,7 +31,7 @@
      <div class="container">
          <div class="inner-blog-wrap">
              <div class="row justify-content-center">
-                 <div class="col-71">
+                 <div class="col-80">
                      <div class="blog-post-wrap">
                          <div class="row">
 
@@ -40,7 +40,7 @@
                                 $blog_data = SelectData('blog', "WHERE resources='0' ORDER BY blog_id DESC");
                                 while ($blogs = $blog_data->fetch_object()) { ?>
 
-                                 <div class="col-md-6">
+                                 <div class="col-md-4">
                                      <div class="blog-post-item-two">
                                          <div class="blog-post-thumb-two">
                                              <a href="blog-details.php?id=<?= $blogs->blog_title ?>"><img src="assets/img/blog/<?= $blogs->blog_image ?>" alt=""></a>
@@ -52,7 +52,8 @@
                                                  <?php
                                                     $blog_content = html_entity_decode($blogs->blog_text);
                                                     $blog_text = strip_tags($blog_content);
-                                                    echo mb_strimwidth($blog_text, 0, 70, "."); ?>
+                                                    // echo mb_strimwidth($blog_text, 0, 70, ".");  
+                                                    echo substrwords($blog_text, 100); ?>
                                              </p>
                                              <div class="blog-meta">
                                                  <ul class="list-wrap">
@@ -74,43 +75,7 @@
                         
                      </div>
                  </div>
-                 <div class="col-29">
-                     <aside class="blog-sidebar">
-                         <div class="sidebar-search">
-                             <form action="search.php" method="POST">
-                                 <input type="text" name="search_text" placeholder="Search Here . . .">
-                                 <button type="submit" name="search_box"><i class="flaticon-search"></i></button>
-                             </form>
-                         </div>
-
-                        <div class="blog-widget">
-                             <h4 class="bw-title">Recent Posts</h4>
-                             <div class="rc-post-wrap">
-                                 <?php
-                                    $datas = SelectData('blog', "limit 5");
-                                    while ($recent_posts = $datas->fetch_object()) { ?>
-                                     <div class="rc-post-item">
-                                         <div class="thumb">
-                                             <a href="blog-details.php?id=<?= $recent_posts->blog_title ?>"><img src="assets/img/blog/<?= $recent_posts->blog_image ?>" height="60px"></a>
-                                         </div>
-                                         <div class="content">
-                                             <span class="date"><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($recent_posts->blog_date_time)) ?></span>
-                                             <h6 class="p-0 m-0"><a href="blog-details.php?id=<?= $recent_posts->blog_title ?>">
-                                                     <?php
-                                                        $rblog_content = html_entity_decode($recent_posts->blog_title);
-                                                        $rblog_text = strip_tags($rblog_content);
-                                                        echo mb_strimwidth($rblog_text, 0, 35, "..."); ?>
-                                                 </a>
-                                             </h6>
-                                         </div>
-                                     </div>
-                                 <?php } ?>
-                             </div>
-                         </div>
-                      
-
-                     </aside>
-                 </div>
+                 
              </div>
          </div>
      </div>
