@@ -12,7 +12,7 @@
                      <nav aria-label="breadcrumb">
                          <ol class="breadcrumb">
                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                             <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                             <li class="breadcrumb-item active" aria-current="page">Resources</li>
                          </ol>
                      </nav>
                  </div>
@@ -71,18 +71,7 @@
 
 
                          </div>
-                         <div class="pagination-wrap mt-30">
-                             <nav aria-label="Page navigation example">
-                                 <ul class="pagination list-wrap">
-                                     <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                     <li class="page-item next-page"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                                 </ul>
-                             </nav>
-                         </div>
+
                      </div>
                  </div>
                  <div class="col-29">
@@ -93,72 +82,32 @@
                                  <button type="submit"><i class="flaticon-search"></i></button>
                              </form>
                          </div>
-                         <div class="blog-widget">
-                             <h4 class="bw-title">Categories</h4>
-                             <div class="bs-cat-list">
-                                 <ul class="list-wrap">
-                                     <li><a href="#">Business <span>(02)</span></a></li>
-                                     <li><a href="#">Consulting <span>(08)</span></a></li>
-                                     <li><a href="#">Corporate <span>(05)</span></a></li>
-                                     <li><a href="#">Design <span>(02)</span></a></li>
-                                     <li><a href="#">Fashion <span>(11)</span></a></li>
-                                     <li><a href="#">Marketing <span>(12)</span></a></li>
-                                 </ul>
-                             </div>
-                         </div>
+                         
                          <div class="blog-widget">
                              <h4 class="bw-title">Recent Posts</h4>
                              <div class="rc-post-wrap">
-                                 <div class="rc-post-item">
-                                     <div class="thumb">
-                                         <a href="blog-details.html"><img src="assets/img/blog/rc_post01.jpg" alt=""></a>
+                                 <?php
+                                    $datas = SelectData('blog', "limit 10");
+                                    while ($recent_posts = $datas->fetch_object()) { ?>
+                                     <div class="rc-post-item">
+                                         <div class="thumb">
+                                             <a href="blog-details.php?id=<?= $recent_posts->blog_title ?>"><img src="assets/img/blog/<?= $recent_posts->blog_image ?>" height="60px"></a>
+                                         </div>
+                                         <div class="content">
+                                             <span class="date"><i class="far fa-calendar"></i><?= date('F d, Y', strtotime($recent_posts->blog_date_time)) ?></span>
+                                             <h6 class="p-0 m-0"><a href="blog-details.php?id=<?= $recent_posts->blog_title ?>">
+                                                     <?php
+                                                        $rblog_content = html_entity_decode($recent_posts->blog_title);
+                                                        $rblog_text = strip_tags($rblog_content);
+                                                        echo mb_strimwidth($rblog_text, 0, 35, "..."); ?>
+                                                 </a>
+                                             </h6>
+                                         </div>
                                      </div>
-                                     <div class="content">
-                                         <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                         <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                     </div>
-                                 </div>
-                                 <div class="rc-post-item">
-                                     <div class="thumb">
-                                         <a href="blog-details.html"><img src="assets/img/blog/rc_post02.jpg" alt=""></a>
-                                     </div>
-                                     <div class="content">
-                                         <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                         <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                     </div>
-                                 </div>
-                                 <div class="rc-post-item">
-                                     <div class="thumb">
-                                         <a href="blog-details.html"><img src="assets/img/blog/rc_post03.jpg" alt=""></a>
-                                     </div>
-                                     <div class="content">
-                                         <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                         <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                     </div>
-                                 </div>
-                                 <div class="rc-post-item">
-                                     <div class="thumb">
-                                         <a href="blog-details.html"><img src="assets/img/blog/rc_post04.jpg" alt=""></a>
-                                     </div>
-                                     <div class="content">
-                                         <span class="date"><i class="far fa-calendar"></i>22 Jan, 2023</span>
-                                         <h2 class="title"><a href="blog-details.html">Whale be raised must be in a month</a></h2>
-                                     </div>
-                                 </div>
+                                 <?php } ?>
                              </div>
                          </div>
-                         <div class="blog-widget">
-                             <h4 class="bw-title">Tags</h4>
-                             <div class="bs-tag-list">
-                                 <ul class="list-wrap">
-                                     <li><a href="#">Finance</a></li>
-                                     <li><a href="#">Consultancy</a></li>
-                                     <li><a href="#">Data</a></li>
-                                     <li><a href="#">Agency</a></li>
-                                     <li><a href="#">Travel</a></li>
-                                 </ul>
-                             </div>
-                         </div>
+                         
                      </aside>
                  </div>
              </div>

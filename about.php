@@ -188,7 +188,7 @@
         <div class="row justify-content-center">
 
             <?php
-            $team_data = SelectData('our_team', "");
+            $team_data = SelectData('our_team', "ORDER BY tid DESC;");
             while ($teams = $team_data->fetch_object()) { ?>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                     <div class="team-item-two">

@@ -71,18 +71,7 @@
 
 
                          </div>
-                         <div class="pagination-wrap mt-30">
-                             <nav aria-label="Page navigation example">
-                                 <ul class="pagination list-wrap">
-                                     <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                     <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                     <li class="page-item next-page"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                                 </ul>
-                             </nav>
-                         </div>
+                        
                      </div>
                  </div>
                  <div class="col-29">
@@ -94,22 +83,7 @@
                              </form>
                          </div>
 
-                         <div class="blog-widget">
-                             <h4 class="bw-title">Categories</h4>
-                             <div class="bs-cat-list">
-                                 <ul class="list-wrap">
-                                     <?php
-                                        $teab_data = SelectData('blog_catagory', "limit 10");
-                                        while ($catagorys = $teab_data->fetch_object()) { ?>
-                                         <li><a href="<?= $catagorys->blog_cata_id ?>"><?= $catagorys->blog_cate_title ?> <span>
-                                                     <?= rowcount('blog', "where blog_catagory='{$catagorys->blog_cata_id}'") ?>
-                                                 </span></a></li>
-                                     <?php } ?>
-                                 </ul>
-                             </div>
-                         </div>
-
-                         <div class="blog-widget">
+                        <div class="blog-widget">
                              <h4 class="bw-title">Recent Posts</h4>
                              <div class="rc-post-wrap">
                                  <?php
@@ -133,21 +107,8 @@
                                  <?php } ?>
                              </div>
                          </div>
+                      
 
-
-
-                         <div class="blog-widget">
-                             <h4 class="bw-title">Tags</h4>
-                             <div class="bs-tag-list">
-                                 <ul class="list-wrap">
-                                     <li><a href="#">Finance</a></li>
-                                     <li><a href="#">Consultancy</a></li>
-                                     <li><a href="#">Data</a></li>
-                                     <li><a href="#">Agency</a></li>
-                                     <li><a href="#">Travel</a></li>
-                                 </ul>
-                             </div>
-                         </div>
                      </aside>
                  </div>
              </div>
