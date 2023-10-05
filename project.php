@@ -31,7 +31,7 @@
      <div class="container">
          <div class="inner-blog-wrap">
              <div class="row justify-content-center">
-                 <div class="col-71">
+                 <div class="col-80">
                      <div class="blog-post-wrap">
                          <div class="row">
 
