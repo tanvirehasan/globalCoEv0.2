@@ -5,7 +5,6 @@
          <?php
             $data = SelectData('a_slider', '');
             while ($row = $data->fetch_object()) { ?>
-
              <div class="single-slider slider-bg" data-background="assets/img/banner/<?= $row->image_file ?>">
                  <div class="container">
                      <div class="row">

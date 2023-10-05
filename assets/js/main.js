@@ -138,7 +138,7 @@ function mainSlider() {
 		fade: true,
 		arrows: false,
 		responsive: [
-			{ breakpoint: 767, settings: { dots: true, arrows: true } }
+			{ breakpoint: 767, settings: { dots: false, arrows: false } }
 		]
 	});
 
