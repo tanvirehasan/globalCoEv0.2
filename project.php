@@ -52,7 +52,7 @@
                                                  <?php
                                                     $blog_content = html_entity_decode($blogs->blog_text);
                                                     $blog_text = strip_tags($blog_content);
-                                                    echo mb_strimwidth($blog_text, 0, 70, "."); ?>
+                                                    echo substrwords($blog_text, 100);?>
                                              </p>
                                              <div class="blog-meta">
                                                  <ul class="list-wrap">
